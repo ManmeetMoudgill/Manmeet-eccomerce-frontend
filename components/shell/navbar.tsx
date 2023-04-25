@@ -7,7 +7,6 @@ import { BiUser } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsList } from "react-icons/bs";
 import Image from "next/image";
-import { informaticaCategories } from "@/constants";
 import UpperNavbarItem from "./sub-components/upper-navbar-item";
 import LowerNavbarItem from "./sub-components/lower-navbar-item";
 
