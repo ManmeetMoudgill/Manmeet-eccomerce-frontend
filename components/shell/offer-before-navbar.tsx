@@ -11,8 +11,8 @@ const Newoffers = () => {
   const [isOfferBarOpen, setIsOfferBarOpen] = useState<boolean>(true);
   return isOfferBarOpen ? (
     <>
-      <div className="py-3 bg-yellowCustom-100 flex justify-center items-center">
-        <div className="w-11/12 sm:w-10/12 2xl:w-3/4 flex justify-center  items-center relative ">
+      <div className="py-3 px-2 2xl:px-0 bg-yellowCustom-100 flex justify-center items-center">
+        <div className="w-full  2xl:w-3/4 flex justify-center  items-center relative ">
           <div className="absolute top-1 right-0">
             <GrClose
               onClick={() => {

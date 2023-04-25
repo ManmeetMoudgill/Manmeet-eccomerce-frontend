@@ -5,6 +5,7 @@ import { GoSearch } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { BsList } from "react-icons/bs";
 import Image from "next/image";
 import { IconType } from "react-icons";
 interface NavbarItemProps {
@@ -18,9 +19,31 @@ const Navbar = () => {
 
   return (
     <section>
-      <div className=" z-10 justify-center items-center bg-white hidden ">
-        <div className=" w-3/4">
-          <div className="mt-3 hidden xl:flex">
+      <div className="border-2 px-4 border-red-600 xl:hidden flex justify-between bg-white ">
+        <div className="border-2  border-green-800 flex items-center  ">
+          <BsList className="text-2xl" />
+        </div>
+        <div className="border-2 border-green-800 flex items-center object-contain h-20 w-40 md:h-24 md:w-56 lg:h-24 lg:w-60 justify-center relative">
+          <Image src="/assets/site-logo.png" alt="Site Logo" fill />
+        </div>
+        <div className="border-2 border-green-800 flex items-center justify-start">
+          <div>
+            <BiUser className="text-2xl text-blueCustom-100" />
+          </div>
+          <div className="ml-2">
+            <div className="relative">
+              <div className="w-4 h-4  rounded-full absolute -top-3 right-1  flex justify-center items-center   bg-yellowCustom-100">
+                <span className="text-xs">1</span>
+              </div>
+              <AiOutlineShoppingCart className="text-2xl text-blueCustom-100" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className=" z-10 justify-center items-center bg-white flex ">
+        <div className=" px-4 2xl:-px-0 w-full 2xl:w-3/4 border-yellow-900 border-2">
+          <div className="mt-3 hidden lg:flex">
             <nav>
               <ul className="flex  items-center">
                 <UpperNavbarItem title="Negozio" Icon={MdLocationOn} />
@@ -30,14 +53,14 @@ const Navbar = () => {
               </ul>
             </nav>
           </div>
-          <div className=" min-h-[10vh] flex justify-between items-center my-1 ">
-            <div className="__left__mid__container ">
+          <div className=" min-h-[10vh] flex justify-between border-2 border-green-900 items-center my-1 ">
+            <div className="__left__mid__container w-full xl:w-auto ">
               <div className="relative">
-                <div className="h-9 w-9 rounded-full absolute top-2 flex justify-center items-center  right-2 bg-yellowCustom-100">
+                <div className="w-7 h-7 xl:h-9 xl:w-9 rounded-full absolute top-2 xl:top-2 flex justify-center items-center  right-2 bg-yellowCustom-100">
                   <GoSearch className="text-lg" />
                 </div>
                 {searchText.length > 0 ? (
-                  <div className="absolute top-4 right-16">
+                  <div className="absolute top-3 xl:top-4 right-12 xl:right-16">
                     <GrClose
                       className="text-lg cursor-pointer"
                       onClick={() => {
@@ -54,11 +77,11 @@ const Navbar = () => {
                     setSearchText(e.target.value);
                   }}
                   placeholder="Cosa stai cercando?"
-                  className="w-96 text-lg bg-white rounded-3xl border shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-10 transition-colors duration-200 ease-in-out"
+                  className=" w-full 2xl:w-96 text-lg bg-white rounded-3xl border shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-8 xl:leading-10 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
-            <div className="__center__mid___container ">
+            <div className="__center__mid___container hidden 2xl:flex ">
               <Image
                 src="/assets/site-logo.png"
                 alt="Site Logo"
@@ -108,8 +131,8 @@ const Navbar = () => {
 };
 export const UpperNavbarItem = ({ title, Icon }: NavbarItemProps) => {
   return (
-    <li className="   text-xl flex items-center justify-center pr-10  cursor-pointer ">
-      <Icon className=" text-base" />
+    <li className=" text-base 2xl:text-xl flex items-center justify-center pr-10  cursor-pointer ">
+      <Icon className="text-sm 2xl:text-base" />
       <span className=" ml-1 text-blueCustom-100">{title}</span>
     </li>
   );
