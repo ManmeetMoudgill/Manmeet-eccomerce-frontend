@@ -15,6 +15,7 @@ interface NavbarItemProps {
 
 const Navbar = () => {
   const [searchText, setSearchText] = useState<string>("");
+
   return (
     <section className="flex justify-center items-center bg-white">
       <div className=" w-3/4">
@@ -28,7 +29,7 @@ const Navbar = () => {
             </ul>
           </nav>
         </div>
-        <div className=" min-h-[10vh] flex justify-between items-center my-3 py-2">
+        <div className=" min-h-[10vh] flex justify-between items-center my-1 ">
           <div className="__left__mid__container ">
             <div className="relative">
               <div className="h-9 w-9 rounded-full absolute top-2 flex justify-center items-center  right-2 bg-yellowCustom-100">
@@ -52,7 +53,7 @@ const Navbar = () => {
                   setSearchText(e.target.value);
                 }}
                 placeholder="Cosa stai cercando?"
-                className="w-96 text-lg bg-white rounded-3xl border border-blueCustom-100 shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-10 transition-colors duration-200 ease-in-out"
+                className="w-96 text-lg bg-white rounded-3xl border shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-10 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -88,7 +89,63 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        <div className="border-2 border-blue-600">asd</div>
+        <div className="border-2 border-blue-600">
+          <div className="border-2 border-red-800">
+            <nav>
+              <ul className="flex  items-center py-2">
+                <li className=" text-blueCustom-100 group font-medium cursor-pointer  py-1 mr-20">
+                  <a className="text-xl tracking-wider">Gaming</a>
+                  <div
+                    className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+                  ></div>
+                </li>
+                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
+                  <a className="text-xl tracking-wider">Telefonia</a>
+                  <div
+                    className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+                  ></div>
+                </li>
+                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
+                  <a className="text-xl tracking-wider">Tv e Audio</a>
+                  <div
+                    className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+                  ></div>
+                </li>
+                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
+                  <a className="text-xl tracking-wider">Elettrodomestici</a>
+                  <div
+                    className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+                  ></div>
+                </li>
+                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
+                  <a className="text-xl tracking-wider">Foto,Video,Droni</a>
+                  <div
+                    className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+                  ></div>
+                </li>
+                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
+                  <a className="text-xl tracking-wider">Lifestyle</a>
+                  <div
+                    className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+                  ></div>
+                </li>
+                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
+                  <a className="text-xl tracking-wider">Greeen tech</a>
+                  <div
+                    className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+                  ></div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </section>
   );
