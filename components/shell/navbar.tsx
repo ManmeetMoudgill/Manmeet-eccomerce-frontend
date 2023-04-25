@@ -94,7 +94,7 @@ const Navbar = () => {
               </div>
               <div className="mx-2">
                 <div className=" cursor-pointer w-12 h-12 rounded-full bg-gray-200  flex items-center justify-center">
-                  <div className="w-10 h-10 bg-white rounded-full  flex items-center justify-center">
+                  <div className="w-9 h-9 bg-white rounded-full  flex items-center justify-center">
                     <BiUser />
                   </div>
                 </div>
@@ -138,14 +138,16 @@ interface LowerNavbarItem {
 }
 export const LowerNavbarItem = ({ title }: LowerNavbarItem) => {
   return (
-    <li className=" text-blueCustom-100    font-medium group cursor-pointer  py-1 mr-16 3xl:mr-20">
-      <a className="text-lg 2xl:text-xl tracking-wider">{title}</a>
+    <li className=" text-blueCustom-100 group    font-medium  cursor-pointer  py-1 mr-16 3xl:mr-20">
+      <a className="text-lg 2xl:text-xl tracking-wider  border-2 border-red-900">
+        {title}
+      </a>
       <div
         className="
                             w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
       ></div>
 
-      <div className="left-0 top-16 absolute w-full opacity-0 group-hover:opacity-100 transition-all  flex z-50 items-center justify-center  h-[50vh]">
+      <div className="left-0 top-16 border-2 border-green-900 pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all  flex z-50 items-center justify-center  h-[50vh]">
         <SubNavbar title={title} />
       </div>
     </li>
@@ -170,7 +172,7 @@ export const SubNavbar = ({ title }: SubNavbarProps) => {
       return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
     case "Greeen tech":
       return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
-    case "LifeStyle":
+    case "Lifestyle":
       return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
     default:
       return <div></div>;
