@@ -33,8 +33,8 @@ const Navbar = () => {
             </ul>
           </nav>
         </div>
-        <div className="border-2 min-h-[25vh] border-yellow-600 flex justify-between items-center my-6 py-2">
-          <div className="__left__mid__container border-2 border-green-900 ">
+        <div className=" min-h-[25vh] flex justify-between items-center my-6 py-2">
+          <div className="__left__mid__container ">
             <div className="relative">
               <div className="h-9 w-9 rounded-full absolute top-1 flex justify-center items-center  right-2 bg-yellowCustom-100">
                 <GoSearch className="text-lg" />
@@ -47,30 +47,30 @@ const Navbar = () => {
               />
             </div>
           </div>
-          <div className="__center__mid___container border-2 border-red-900">
+          <div className="__center__mid___container ">
             <Image
               src="/assets/site-logo.png"
               alt="Site Logo"
-              width={300}
+              width={400}
               height={300}
             />
           </div>
 
-          <div className="__right__mid__container border-2 flex justify-center items-center border-red-900 px-3">
-            <div className="border-2 border-green-100 cursor-pointer mx-4">
-              <div className="flex items-end">
+          <div className="__right__mid__container  flex justify-center items-center px-3">
+            <div className="   cursor-pointer mx-4">
+              <div className="flex justify-center items-end">
                 <span className="text-xl">Ciao</span>
-                <IoIosArrowDown className="ml-3 text-xl" />
+                <IoIosArrowDown className="ml-1 text-xl" />
               </div>
             </div>
-            <div className="border-2 border-green-100 mx-3">
+            <div className="  mx-3">
               <div className=" cursor-pointer w-14 h-14 rounded-full bg-gray-200  flex items-center justify-center">
                 <div className="w-10 h-10 bg-white rounded-full  flex items-center justify-center">
                   <BiUser />
                 </div>
               </div>
             </div>
-            <div className="border-2 border-green-100 ml-6">
+            <div className="  ml-6">
               <div className="relative">
                 <div className="w-14 h-14 rounded-full hover:bg-gray-200 flex justify-center items-center cursor-pointer">
                   <AiOutlineShoppingCart className="text-3xl text-blueCustom-100" />
