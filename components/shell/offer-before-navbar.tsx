@@ -12,16 +12,16 @@ const Newoffers = () => {
   return isOfferBarOpen ? (
     <>
       <div className="py-3 bg-yellowCustom-100 flex justify-center items-center">
-        <div className="w-3/4 flex justify-center items-center relative">
+        <div className="w-11/12 sm:w-10/12 2xl:w-3/4 flex justify-center  items-center relative ">
           <div className="absolute top-1 right-0">
             <GrClose
               onClick={() => {
                 setIsOfferBarOpen(false);
               }}
-              className="text-xl cursor-pointer"
+              className="text-base 2xl:text-xl cursor-pointer"
             />
           </div>
-          <h4 className="uppercase tracking-wide text-xl font-bold cursor-pointer hover:underline">
+          <h4 className="uppercase tracking-wide text-base 2xl:text-xl font-bold cursor-pointer hover:underline">
             {NEW_OFFER?.description}
           </h4>
         </div>
