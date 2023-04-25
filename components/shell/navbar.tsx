@@ -1,4 +1,5 @@
-import React, { useState, useRef, useCallback, useEffect } from "react";
+//@ts-nocheck
+import React, { useState } from "react";
 import { MdLocationOn, MdOutlineStarRate } from "react-icons/md";
 import { GrDocumentImage, GrServices, GrClose } from "react-icons/gr";
 import { GoSearch } from "react-icons/go";
@@ -14,6 +15,48 @@ interface NavbarItemProps {
   onClick?: () => void;
 }
 
+const informaticaCategories = Object.freeze({
+  computerPortatili: [
+    "Notebook",
+    "Notebook 2 in 1",
+    "Notebook Gaming",
+    "Notebook Apple",
+  ],
+  tabletEdReader: [
+    "Tablet",
+    "E-Reader",
+    "Accessori Tablet",
+    "Accessori E-Reader",
+  ],
+  mac: ["MacBook", "iMac", "Mac Mini", "Mac Pro", "Accessori Mac"],
+  workStationServer: [
+    "Workstation",
+    "Server",
+    "Accessori Workstation",
+    "Accessori Server",
+  ],
+  pcDesktop: [
+    "Pc Desktop",
+    "Pc All in One",
+    "Accessori Pc Desktop",
+    "Accessori Pc All in One",
+  ],
+  stampantiScanner: [
+    "Stampanti",
+    "Scanner",
+    "Accessori Stampanti",
+    "Accessori Scanner",
+  ],
+  monitor: ["Monitor", "Accessori Monitor"],
+  hardDiskStorage: [
+    "Hard Disk",
+    "SSD",
+    "Nas",
+    "Accessori Hard Disk",
+    "Accessori SSD",
+    "Accessori Nas",
+  ],
+});
 const Navbar = () => {
   const [searchText, setSearchText] = useState<string>("");
 
@@ -110,7 +153,7 @@ const Navbar = () => {
           </div>
           <nav className={`hidden xl:block`}>
             <ul className="flex  relative  items-center py-2">
-              <LowerNavbarItem title="Elettrodomestici" />
+              <LowerNavbarItem title="Informatica" />
               <LowerNavbarItem title="Foto,Video,Droni" />
               <LowerNavbarItem title="Gaming" />
               <LowerNavbarItem title="Telefonia" />
@@ -145,9 +188,7 @@ export const LowerNavbarItem = ({ title }: LowerNavbarItem) => {
                             w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
       ></div>
 
-      <div className="left-0 top-16 border-2 border-green-900 pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all  flex z-50 items-center justify-center  h-[50vh]">
-        <SubNavbar title={title} />
-      </div>
+      <SubNavbar title={title} />
     </li>
   );
 };
@@ -156,22 +197,213 @@ interface SubNavbarProps {
   title: string;
 }
 
+interface SubNavbarItemProps {
+  title: string;
+}
+
+const SubNavBarItem = ({ title }: SubNavbarItemProps) => {
+  return (
+    <li className="text-black text-base transition-all delay-75 hover:underline">
+      {title}
+    </li>
+  );
+};
+
 export const SubNavbar = ({ title }: SubNavbarProps) => {
   switch (title) {
-    case "Elettrodomestici":
-      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+    case "Informatica":
+      return (
+        <div className="left-0 top-14 flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  py-4">
+          <div className="grid grid-cols-6">
+            <div className=" flex flex-col ">
+              <nav className="mt-2 min-h-[15vh] ">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Computer Portatili
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.computerPortatili?.map(
+                    (item, index) => {
+                      return (
+                        index < 3 && <SubNavBarItem key={index} title={item} />
+                      );
+                    }
+                  )}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+              <nav className="mt-4 min-h-[15vh]">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Tablet ed Ebbok Reader
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.tabletEdReader?.map((item, index) => {
+                    return (
+                      index < 3 && <SubNavBarItem key={index} title={item} />
+                    );
+                  })}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="">
+              <nav className="mt-2 min-h-[15vh]">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Mac
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.mac?.map((item, index) => {
+                    return (
+                      index < 3 && <SubNavBarItem key={index} title={item} />
+                    );
+                  })}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+              <nav className="mt-4 min-h-[15vh]">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Workstation e Server
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.workStationServer?.map(
+                    (item, index) => {
+                      return (
+                        index < 3 && <SubNavBarItem key={index} title={item} />
+                      );
+                    }
+                  )}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="">
+              <nav className="mt-2 min-h-[15vh]">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Pc Desktop
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.pcDesktop?.map((item, index) => {
+                    return (
+                      index < 3 && <SubNavBarItem key={index} title={item} />
+                    );
+                  })}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+              <nav className="mt-4 min-h-[15vh]">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Stampanti e Scanner
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.stampantiScanner?.map(
+                    (item, index) => {
+                      return (
+                        index < 3 && <SubNavBarItem key={index} title={item} />
+                      );
+                    }
+                  )}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="">
+              <nav className="mt-2 min-h-[15vh]">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Monitor
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.monitor?.map((item, index) => {
+                    return (
+                      index < 3 && <SubNavBarItem key={index} title={item} />
+                    );
+                  })}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+              <nav className="mt-4 min-h-[15vh]">
+                <span className="text-xl font-bold text-blueCustom-100">
+                  Hard Disk e Storage
+                </span>
+                <ul className="flex flex-col">
+                  {informaticaCategories?.hardDiskStorage?.map(
+                    (item, index) => {
+                      return (
+                        index < 3 && <SubNavBarItem key={index} title={item} />
+                      );
+                    }
+                  )}
+                  <li className="text-blueCustom-100 text-base transition-all delay-75 underline">
+                    Vedi tutti
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="col-span-2 border-l-2 border-gray-200"></div>
+          </div>
+          <div className="py-2 w-full bg-gray-200">asdsadasdasd</div>
+        </div>
+      );
     case "Foto,Video,Droni":
-      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+      return (
+        <div className="left-0 top-14  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  h-[50vh]">
+          <div className="z-50 w-full border-2 border-blue-600">
+            <div className="">asdsadsadsadasdsad</div>
+          </div>
+        </div>
+      );
     case "Gaming":
-      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+      return (
+        <div className="left-0 top-14  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  h-[50vh]">
+          <div className="z-50 w-full border-2 border-blue-600">
+            <div className="">asdsadsadsadasdsad</div>
+          </div>
+        </div>
+      );
     case "Telefonia":
-      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+      return (
+        <div className="left-0 top-14  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  h-[50vh]">
+          <div className="z-50 w-full border-2 border-blue-600">
+            <div className="">asdsadsadsadasdsad</div>
+          </div>
+        </div>
+      );
     case "Tv e Audio":
-      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+      return (
+        <div className="left-0 top-14  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  h-[50vh]">
+          <div className="z-50 w-full border-2 border-blue-600">
+            <div className="">asdsadsadsadasdsad</div>
+          </div>
+        </div>
+      );
     case "Greeen tech":
-      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+      return (
+        <div className="left-0 top-14  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  h-[50vh]">
+          <div className="z-50 w-full border-2 border-blue-600">
+            <div className="">asdsadsadsadasdsad</div>
+          </div>
+        </div>
+      );
     case "Lifestyle":
-      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+      return (
+        <div className="left-0 top-14 border-2 border-green-900 pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  h-[50vh]">
+          <div className="z-50 w-full border-2 border-blue-600">
+            <div className="border-2 border-green-900">asdsadsadsadasdsad</div>
+          </div>
+        </div>
+      );
     default:
       return <div></div>;
   }
