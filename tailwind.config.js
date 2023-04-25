@@ -16,6 +16,9 @@ module.exports = {
         yellowCustom: {
           100: "#F1C400",
         },
+        blueCustom: {
+          100: "#1d428a",
+        },
       },
     },
   },
