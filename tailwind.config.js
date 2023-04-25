@@ -20,6 +20,10 @@ module.exports = {
           100: "#1d428a",
         },
       },
+      screens: {
+        "3xl": "1800px",
+        "4xl": "2000px",
+      },
     },
   },
   plugins: [],

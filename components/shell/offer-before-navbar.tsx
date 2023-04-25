@@ -18,10 +18,10 @@ const Newoffers = () => {
               onClick={() => {
                 setIsOfferBarOpen(false);
               }}
-              className="text-base 2xl:text-xl cursor-pointer"
+              className="text-sm md:text-base 2xl:text-xl cursor-pointer"
             />
           </div>
-          <h4 className="uppercase tracking-wide text-base 2xl:text-xl font-bold cursor-pointer hover:underline">
+          <h4 className="uppercase tracking-wide text-sm md:text-base 2xl:text-xl font-bold cursor-pointer hover:underline">
             {NEW_OFFER?.description}
           </h4>
         </div>

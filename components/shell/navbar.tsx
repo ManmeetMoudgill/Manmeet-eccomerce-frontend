@@ -19,14 +19,14 @@ const Navbar = () => {
 
   return (
     <section>
-      <div className="border-2 px-4 border-red-600 xl:hidden flex justify-between bg-white ">
-        <div className="border-2  border-green-800 flex items-center  ">
+      <div className=" px-4 xl:hidden flex justify-between bg-white ">
+        <div className="   flex items-center  ">
           <BsList className="text-2xl" />
         </div>
-        <div className="border-2 border-green-800 flex items-center object-contain h-20 w-40 md:h-24 md:w-56 lg:h-24 lg:w-60 justify-center relative">
+        <div className="  flex items-center object-contain h-20 w-40 md:h-24 md:w-56 lg:h-24 lg:w-60 justify-center relative">
           <Image src="/assets/site-logo.png" alt="Site Logo" fill />
         </div>
-        <div className="border-2 border-green-800 flex items-center justify-start">
+        <div className="  flex items-center justify-start">
           <div>
             <BiUser className="text-2xl text-blueCustom-100" />
           </div>
@@ -42,7 +42,7 @@ const Navbar = () => {
       </div>
 
       <div className=" z-10 justify-center items-center bg-white flex ">
-        <div className=" px-4 2xl:-px-0 w-full 2xl:w-3/4 border-yellow-900 border-2">
+        <div className=" px-4 2xl:-px-0 w-full  2xl:w-11/12 3xl:w-4/5 4xl:w-10/12">
           <div className="mt-3 hidden lg:flex">
             <nav>
               <ul className="flex  items-center">
@@ -53,7 +53,7 @@ const Navbar = () => {
               </ul>
             </nav>
           </div>
-          <div className=" min-h-[10vh] flex justify-between border-2 border-green-900 items-center my-1 ">
+          <div className=" min-h-[10vh] flex justify-between items-center my-1 ">
             <div className="__left__mid__container w-full xl:w-auto ">
               <div className="relative">
                 <div className="w-7 h-7 xl:h-9 xl:w-9 rounded-full absolute top-2 xl:top-2 flex justify-center items-center  right-2 bg-yellowCustom-100">
@@ -77,17 +77,12 @@ const Navbar = () => {
                     setSearchText(e.target.value);
                   }}
                   placeholder="Cosa stai cercando?"
-                  className=" w-full 2xl:w-96 text-lg bg-white rounded-3xl border shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-8 xl:leading-10 transition-colors duration-200 ease-in-out"
+                  className=" w-full xl:w-80 2xl:w-96 text-lg bg-white rounded-3xl border shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-8 xl:leading-10 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
-            <div className="__center__mid___container hidden 2xl:flex ">
-              <Image
-                src="/assets/site-logo.png"
-                alt="Site Logo"
-                width={400}
-                height={300}
-              />
+            <div className="__center__mid___container relative hidden xl:flex lg:h-52 lg:w-80 2xl:h-52 2xl:w-96 ">
+              <Image src="/assets/site-logo.png" alt="Site Logo" fill />
             </div>
 
             <div className="__right__mid__container  hidden xl:flex justify-center items-center px-3">
@@ -98,7 +93,7 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="mx-2">
-                <div className=" cursor-pointer w-14 h-14 rounded-full bg-gray-200  flex items-center justify-center">
+                <div className=" cursor-pointer w-12 h-12 rounded-full bg-gray-200  flex items-center justify-center">
                   <div className="w-10 h-10 bg-white rounded-full  flex items-center justify-center">
                     <BiUser />
                   </div>
@@ -143,14 +138,14 @@ interface LowerNavbarItem {
 }
 export const LowerNavbarItem = ({ title }: LowerNavbarItem) => {
   return (
-    <li className=" text-blueCustom-100   font-medium group cursor-pointer  py-1 mr-20">
-      <a className="text-xl tracking-wider">{title}</a>
+    <li className=" text-blueCustom-100    font-medium group cursor-pointer  py-1 mr-16 3xl:mr-20">
+      <a className="text-lg 2xl:text-xl tracking-wider">{title}</a>
       <div
         className="
                             w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
       ></div>
 
-      <div className="left-0 top-16 absolute w-full opacity-0 group-hover:opacity-100 transition-all  flex z-50 items-center justify-center border-2 border-red-600 h-[50vh]">
+      <div className="left-0 top-16 absolute w-full opacity-0 group-hover:opacity-100 transition-all  flex z-50 items-center justify-center  h-[50vh]">
         <SubNavbar title={title} />
       </div>
     </li>
@@ -174,6 +169,8 @@ export const SubNavbar = ({ title }: SubNavbarProps) => {
     case "Tv e Audio":
       return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
     case "Greeen tech":
+      return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
+    case "LifeStyle":
       return <div className="w-3/4 border-2 border-blue-600">{title}</div>;
     default:
       return <div></div>;
