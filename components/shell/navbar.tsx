@@ -15,7 +15,15 @@ interface NavbarItemProps {
 
 const Navbar = () => {
   const [searchText, setSearchText] = useState<string>("");
+  const [activeItem, setActiveItem] = useState<string>("");
 
+  const onMouseEnterFunc = (activeItem: string) => {
+    setActiveItem(activeItem);
+  };
+
+  const onMouseLeaveFunc = () => {
+    setActiveItem("");
+  };
   return (
     <section className="flex justify-center items-center bg-white">
       <div className=" w-3/4">
@@ -93,55 +101,41 @@ const Navbar = () => {
           <div className="border-2 border-red-800">
             <nav>
               <ul className="flex  items-center py-2">
-                <li className=" text-blueCustom-100 group font-medium cursor-pointer  py-1 mr-20">
-                  <a className="text-xl tracking-wider">Gaming</a>
-                  <div
-                    className="
-                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
-                  ></div>
-                </li>
-                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
-                  <a className="text-xl tracking-wider">Telefonia</a>
-                  <div
-                    className="
-                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
-                  ></div>
-                </li>
-                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
-                  <a className="text-xl tracking-wider">Tv e Audio</a>
-                  <div
-                    className="
-                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
-                  ></div>
-                </li>
-                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
-                  <a className="text-xl tracking-wider">Elettrodomestici</a>
-                  <div
-                    className="
-                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
-                  ></div>
-                </li>
-                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
-                  <a className="text-xl tracking-wider">Foto,Video,Droni</a>
-                  <div
-                    className="
-                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
-                  ></div>
-                </li>
-                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
-                  <a className="text-xl tracking-wider">Lifestyle</a>
-                  <div
-                    className="
-                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
-                  ></div>
-                </li>
-                <li className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20">
-                  <a className="text-xl tracking-wider">Greeen tech</a>
-                  <div
-                    className="
-                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
-                  ></div>
-                </li>
+                <LowerNavbarItem
+                  onMouseLeave={onMouseLeaveFunc}
+                  onMouseEnter={(value) => onMouseEnterFunc(value)}
+                  title="Elettrodomestici"
+                />
+                <LowerNavbarItem
+                  onMouseLeave={onMouseLeaveFunc}
+                  onMouseEnter={(value) => onMouseEnterFunc(value)}
+                  title="Foto,Video,Droni"
+                />
+                <LowerNavbarItem
+                  onMouseLeave={onMouseLeaveFunc}
+                  onMouseEnter={(value) => onMouseEnterFunc(value)}
+                  title="Gaming"
+                />
+                <LowerNavbarItem
+                  onMouseLeave={onMouseLeaveFunc}
+                  onMouseEnter={(value) => onMouseEnterFunc(value)}
+                  title="Telefonia"
+                />
+                <LowerNavbarItem
+                  onMouseLeave={onMouseLeaveFunc}
+                  onMouseEnter={(value) => onMouseEnterFunc(value)}
+                  title="Tv e Audio"
+                />
+                <LowerNavbarItem
+                  onMouseLeave={onMouseLeaveFunc}
+                  onMouseEnter={(value) => onMouseEnterFunc(value)}
+                  title="Greeen tech"
+                />
+                <LowerNavbarItem
+                  onMouseLeave={onMouseLeaveFunc}
+                  onMouseEnter={(value) => onMouseEnterFunc(value)}
+                  title="Lifestyle"
+                />
               </ul>
             </nav>
           </div>
@@ -155,6 +149,33 @@ export const UpperNavbarItem = ({ title, Icon }: NavbarItemProps) => {
     <li className="   text-xl flex items-center justify-center pr-10  cursor-pointer ">
       <Icon className=" text-base" />
       <span className=" ml-1 text-blueCustom-100">{title}</span>
+    </li>
+  );
+};
+
+interface LowerNavbarItem {
+  title: string;
+  onMouseEnter: (vaue: string) => void;
+  onMouseLeave: () => void;
+}
+export const LowerNavbarItem = ({
+  title,
+  onMouseEnter,
+  onMouseLeave,
+}: LowerNavbarItem) => {
+  return (
+    <li
+      onMouseEnter={() => {
+        onMouseEnter(title);
+      }}
+      onMouseLeave={onMouseLeave}
+      className=" text-blueCustom-100 font-medium group cursor-pointer  py-1 mr-20"
+    >
+      <a className="text-xl tracking-wider">{title}</a>
+      <div
+        className="
+                            w-0 group-hover:w-full transition-all ease-in-out duration-700 bg-blueCustom-100 h-1 mt-1"
+      ></div>
     </li>
   );
 };
