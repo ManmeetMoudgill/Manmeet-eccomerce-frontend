@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { MdLocationOn, MdOutlineStarRate } from "react-icons/md";
 import { GrDocumentImage, GrServices, GrClose } from "react-icons/gr";
 import { GoSearch } from "react-icons/go";
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className=" z-10 justify-center items-center bg-white flex ">
+      <div className={`justify-center items-center bg-white flex`}>
         <div className=" px-4 2xl:-px-0 w-full  2xl:w-11/12 3xl:w-4/5 4xl:w-10/12">
           <div className="mt-3 hidden lg:flex">
             <nav>
@@ -108,7 +108,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <nav className="hidden xl:block">
+          <nav className={`hidden xl:block`}>
             <ul className="flex  relative  items-center py-2">
               <LowerNavbarItem title="Elettrodomestici" />
               <LowerNavbarItem title="Foto,Video,Droni" />
