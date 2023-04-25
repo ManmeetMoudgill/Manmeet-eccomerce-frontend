@@ -1,49 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdLocationOn, MdOutlineStarRate } from "react-icons/md";
-import { GrDocumentImage, GrServices } from "react-icons/gr";
+import { GrDocumentImage, GrServices, GrClose } from "react-icons/gr";
 import { GoSearch } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Image from "next/image";
+import { IconType } from "react-icons";
+interface NavbarItemProps {
+  title: string;
+  Icon: IconType;
+  onClick?: () => void;
+}
 
 const Navbar = () => {
+  const [searchText, setSearchText] = useState<string>("");
   return (
-    <section className="border-2 border-red-600 flex justify-center items-center bg-white">
+    <section className="flex justify-center items-center bg-white">
       <div className=" w-3/4">
         <div className="mt-3">
           <nav>
             <ul className="flex  items-center">
-              <li className="   text-xl flex items-center justify-center pr-10  cursor-pointer ">
-                <MdLocationOn className=" text-base" />
-                <span className=" ml-1 text-blueCustom-100">Negozi</span>
-              </li>
-              <li className="  text-xl flex items-center justify-center pr-10 cursor-pointer ">
-                <GrDocumentImage className=" text-base" />
-                <span className=" ml-1 text-blueCustom-100">Volantini</span>
-              </li>
-              <li className="   text-xl flex items-center justify-center pr-10 cursor-pointer ">
-                <MdOutlineStarRate className=" text-base" />
-                <span className=" ml-1 text-blueCustom-100">Star Club</span>
-              </li>
-              <li className="   text-xl flex items-center justify-center pr-10 cursor-pointer ">
-                <GrServices className=" text-base" />
-                <span className=" ml-1 text-blueCustom-100">Servizi</span>
-              </li>
+              <UpperNavbarItem title="Negozio" Icon={MdLocationOn} />
+              <UpperNavbarItem title="Volantini" Icon={GrDocumentImage} />
+              <UpperNavbarItem title="Star Club" Icon={MdOutlineStarRate} />
+              <UpperNavbarItem title="Servizi" Icon={GrServices} />
             </ul>
           </nav>
         </div>
-        <div className=" min-h-[25vh] flex justify-between items-center my-6 py-2">
+        <div className=" min-h-[10vh] flex justify-between items-center my-3 py-2">
           <div className="__left__mid__container ">
             <div className="relative">
-              <div className="h-9 w-9 rounded-full absolute top-1 flex justify-center items-center  right-2 bg-yellowCustom-100">
+              <div className="h-9 w-9 rounded-full absolute top-2 flex justify-center items-center  right-2 bg-yellowCustom-100">
                 <GoSearch className="text-lg" />
               </div>
+              {searchText.length > 0 ? (
+                <div className="absolute top-4 right-16">
+                  <GrClose
+                    className="text-lg cursor-pointer"
+                    onClick={() => {
+                      setSearchText("");
+                    }}
+                  />
+                </div>
+              ) : undefined}
 
               <input
                 type="text"
+                value={searchText}
+                onChange={(e) => {
+                  setSearchText(e.target.value);
+                }}
                 placeholder="Cosa stai cercando?"
-                className="w-96 text-lg bg-white rounded-3xl border border-blueCustom-100 shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-9 transition-colors duration-200 ease-in-out"
+                className="w-96 text-lg bg-white rounded-3xl border border-blueCustom-100 shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-10 transition-colors duration-200 ease-in-out"
               />
             </div>
           </div>
@@ -63,7 +72,7 @@ const Navbar = () => {
                 <IoIosArrowDown className="ml-1 text-xl" />
               </div>
             </div>
-            <div className="  mx-3">
+            <div className="mx-2">
               <div className=" cursor-pointer w-14 h-14 rounded-full bg-gray-200  flex items-center justify-center">
                 <div className="w-10 h-10 bg-white rounded-full  flex items-center justify-center">
                   <BiUser />
@@ -82,6 +91,14 @@ const Navbar = () => {
         <div className="border-2 border-blue-600">asd</div>
       </div>
     </section>
+  );
+};
+export const UpperNavbarItem = ({ title, Icon }: NavbarItemProps) => {
+  return (
+    <li className="   text-xl flex items-center justify-center pr-10  cursor-pointer ">
+      <Icon className=" text-base" />
+      <span className=" ml-1 text-blueCustom-100">{title}</span>
+    </li>
   );
 };
 
