@@ -14,7 +14,7 @@ const Navbar = () => {
   const [searchText, setSearchText] = useState<string>("");
 
   return (
-    <section>
+    <section className="z-50">
       <div className=" px-4 xl:hidden flex justify-between bg-white ">
         <div className="   flex items-center  ">
           <BsList className="text-2xl" />
@@ -38,7 +38,7 @@ const Navbar = () => {
       </div>
 
       <div
-        id="nav__bar__categories"
+        id="nav__bar__categories "
         className={`justify-center items-center bg-white flex`}
       >
         <div className=" px-4 2xl:-px-0 w-full  2xl:w-11/12 3xl:w-4/5 4xl:w-10/12">

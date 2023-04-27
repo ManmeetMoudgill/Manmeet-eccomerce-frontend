@@ -20,13 +20,8 @@ export const SubNavbar = ({ title }: Props) => {
     case "Greeen tech":
       return <SubNavbarGrid />;
     case "Lifestyle":
-      return (
-        <div className="left-0 top-14 border-2 border-green-900 pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  h-[50vh]">
-          <div className="z-50 w-full border-2 border-blue-600">
-            <div className="border-2 border-green-900">asdsadsadsadasdsad</div>
-          </div>
-        </div>
-      );
+      return <SubNavbarGrid />;
+
     default:
       return <div></div>;
   }
@@ -34,7 +29,7 @@ export const SubNavbar = ({ title }: Props) => {
 
 export const SubNavBarItem = ({ title }: Props) => {
   return (
-    <li className="text-black text-base transition-all delay-75 hover:underline">
+    <li className="text-black text-base font-light transition-all delay-75 hover:underline">
       {title}
     </li>
   );
