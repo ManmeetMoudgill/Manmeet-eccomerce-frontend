@@ -79,13 +79,19 @@ const items: Array<OffersItems> = [
   },
 ];
 
+const breakPoints = [
+  { width: 1, itemsToShow: 1 },
+  { width: 550, itemsToShow: 2, itemsToScroll: 1 },
+  { width: 768, itemsToShow: 4, itemsToScroll: 1 },
+  { width: 1200, itemsToShow: 5, itemsToScroll: 1 },
+];
+
 const BestOffersCarousel = () => {
   return (
     <div className="flex w-full justify-center items-center home_page_products_carousel my-8 ">
       <div className="w-full">
         <Carousel
-          itemsToShow={5}
-          itemsToScroll={1}
+          breakPoints={breakPoints}
           autoPlaySpeed={2500}
           enableAutoPlay={false}
         >
@@ -101,7 +107,7 @@ const BestOffersCarousel = () => {
                   alt={item?.title}
                 />
                 <div className="flex justify-center items-center flex-col">
-                  <p className="my-1 text-base font-light text-gray-600">
+                  <p className="my-1 text-base font-extralight text-gray-600">
                     {item?.title}
                   </p>
                   <span className=" text-xl font-light">
@@ -111,10 +117,12 @@ const BestOffersCarousel = () => {
               </div>
 
               <div className="flex flex-col mt-16 items-center justify-center">
-                <p className="text-blue-400 text-lg">
-                  Risparmio il{" "}
-                  <span className="text-red-900">-{item?.discount}%</span>
-                </p>
+                <div className="text-blue-400 flex items-center font-medium text-lg">
+                  <span>Risparmio il </span>
+                  <span className=" font-medium text-blue-400 ml-2">
+                    -{item?.discount}%
+                  </span>
+                </div>
                 <div className="flex items-center justify-center ">
                   <span className="text-lg px-2 line-through text-gray-600">
                     € {item?.price}
