@@ -19,19 +19,53 @@ body {
 
 }
 
-.rec-arrow-left, .rec-arrow-right{
+
+/* HOME PAGE PRODUCTS CAROUSEL CSS */
+.home_page_products_carousel .rec-arrow-left, .home_page_products_carousel .rec-arrow-right{
+  background-color: transparent !important;
+  border:none !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  display: none !important;
+}
+
+.home_page_products_carousel  .rec-pagination{
+  margin: 0 !important;
+  position: relative !important;
+  top: 1rem !important;
+}
+.home_page_products_carousel  .rec-dot{
+  width:2rem !important;
+  height:0.4rem !important;
+  border-radius: 0.2rem !important;
+  box-shadow: none !important;
+  background-color:var(--customBrown) !important;
+}
+.home_page_products_carousel  .rec-dot:hover{
+  box-shadow: none !important;
+}
+
+.home_page_products_carousel  .rec-dot_active{
+  background-color:var(--customYellow) !important;
+  box-shadow: none !important;
+  width:3.5rem !important;
+}
+
+
+/*HOME PAGE  OFFERS CAROUSEL CSS */
+.offers-carousel  .rec-arrow-left, .rec-arrow-right{
   background-color: transparent !important;
   border:none !important;
   border-radius: 0px !important;
   box-shadow: none !important;
 
 }
-.rec-carousel{
+.offers-carousel  .rec-carousel{
   position: relative !important;
 
 }
 
-.rec-arrow-left{
+.offers-carousel  .rec-arrow-left{
   position: absolute !important;
   display: none !important;
 
@@ -39,7 +73,7 @@ body {
   top: 70% !important;
   z-index: 1 !important;
 }
-.rec-arrow-right{
+.offers-carousel  .rec-arrow-right{
   position: absolute !important;
   display: none !important;
   right: 35% !important;
@@ -47,42 +81,27 @@ body {
   z-index: 1 !important;
 }
 
-.rec-pagination{
+.offers-carousel  .rec-pagination{
   position: relative !important;
   bottom: 3rem !important;
   margin: 0 !important;
 }
-.rec-dot{
+.offers-carousel  .rec-dot{
   width:2rem !important;
   height:0.4rem !important;
   border-radius: 0.2rem !important;
   box-shadow: none !important;
   background-color:var(--customBrown) !important;
 }
-.rec-dot:hover{
+.offers-carousel  .rec-dot:hover{
   box-shadow: none !important;
 }
 
-.rec-dot_active{
+.offers-carousel  .rec-dot_active{
   background-color:var(--customYellow) !important;
   box-shadow: none !important;
   width:3.5rem !important;
 }
-.rec-slider-container{
+.offers-carousel .rec-slider-container{
   margin:0 !important;
-}
-.custom-bg-1{
-  background-color:red;
-}
-.custom-bg-2{
-  background-color:blue;
-}
-.custom-bg-3{
-  background-color:green;
-}
-.custom-bg-4{
-  background-color:yellow;
-}
-.custom-bg-5{
-  background-color:purple;
 }

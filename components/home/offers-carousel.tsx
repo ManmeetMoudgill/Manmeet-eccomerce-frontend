@@ -20,7 +20,7 @@ const items: Array<OffersItems> = [
 
 const OffersCarousel = () => {
   return (
-    <div className="w-full ">
+    <div className="w-full offers-carousel ">
       <Carousel autoPlaySpeed={2500} enableAutoPlay>
         {items.map((item) => (
           <div className="w-full h-auto min-h-[60vh]" key={item.id}>
