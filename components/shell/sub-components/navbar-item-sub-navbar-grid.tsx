@@ -4,7 +4,7 @@ import { SubNavBarItem } from "./navbar-item-sub-navbar";
 
 const SubNavbarGrid = () => {
   return (
-    <div className="left-0 top-10 flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  py-4">
+    <div className="left-0 top-10  flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  py-4">
       <div className="grid grid-cols-6">
         <div className=" flex flex-col ">
           <nav className="mt-2 min-h-[15vh] ">
@@ -116,7 +116,7 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
         </div>
-        <div className="col-span-2 border-l-2 border-gray-200"></div>
+        <div className="col-span-2  border-l-4 border-gray-100"></div>
       </div>
     </div>
   );

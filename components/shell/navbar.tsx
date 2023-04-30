@@ -20,7 +20,7 @@ const Navbar = () => {
           <BsList className="text-2xl" />
         </div>
         <div className="  flex items-center object-contain h-20 w-40 md:h-24 md:w-56 lg:h-24 lg:w-60 justify-center relative">
-          <Image src="/assets/site-logo.png" alt="Site Logo" fill />
+          <Image src="/assets/site-logo.png" priority alt="Site Logo" fill />
         </div>
         <div className="  flex items-center justify-start">
           <div>
@@ -81,7 +81,12 @@ const Navbar = () => {
               </div>
             </div>
             <div className="__center__mid___container relative hidden xl:flex lg:h-52 lg:w-80 2xl:h-52 2xl:w-96 ">
-              <Image src="/assets/site-logo.png" alt="Site Logo" fill />
+              <Image
+                src="/assets/site-logo.png"
+                priority
+                alt="Site Logo"
+                fill
+              />
             </div>
 
             <div className="__right__mid__container  hidden xl:flex justify-center items-center px-3">
