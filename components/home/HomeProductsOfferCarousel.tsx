@@ -1,114 +1,16 @@
 //@ts-nocheck
+import { BreakPoints, OffersItems } from "@/view-model/home";
 import Image from "next/image";
 import Carousel from "react-elastic-carousel";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { AiOutlineHeart } from "react-icons/ai";
-interface OffersItems {
-  id: number;
-  src: string;
-  title: string;
-  description?: string;
-  price?: string;
-  discount?: number;
-  discountPrice?: string;
-  tag?: string;
-  tagBackgroundClass?: string;
+
+interface Props {
+  items: Array<OffersItems>;
+  breakPoints: Array<BreakPoints>;
 }
 
-const items: Array<OffersItems> = [
-  {
-    id: 1,
-    src: "/assets/products/frigorifero.jpg",
-    title: "Frigorifero",
-    description: "Frigorifero da incasso",
-    price: "1000,00",
-    discount: 10,
-    discountPrice: "900,00",
-    tag: "Sconto",
-    tagBackgroundClass: "bg-red-600",
-  },
-  {
-    id: 2,
-    src: "/assets/products/lavastoglie.webp",
-    title: "Lavatrice",
-    description: "Lavatrice da incasso",
-    price: "2500,00",
-    discount: 8,
-    discountPrice: "1400,00",
-    tag: "Sconto",
-    tagBackgroundClass: "bg-red-600",
-  },
-  {
-    id: 3,
-    src: "/assets/products/notebook.jpg",
-    title: "Lavastoviglie",
-    description: "Lavastoviglie da incasso",
-    price: "1000,00",
-    discount: 20,
-    discountPrice: "700,00",
-    tag: "Acquista con MS6",
-    tagBackgroundClass: "bg-red-600",
-  },
-  {
-    id: 4,
-    src: "/assets/products/scopeElettrice.jpg",
-    title: "Forno",
-    description: "Forno da incasso",
-    price: "800,00",
-    discount: 15,
-    discountPrice: "620,00",
-    tag: "Sconto",
-    tagBackgroundClass: "bg-red-600",
-  },
-  {
-    id: 5,
-    src: "/assets/products/tv4K.jpg",
-    title: "Tv 4K",
-    description: "Televisore 4K",
-    price: "900,00",
-    discount: 5,
-    discountPrice: "450,00",
-    tag: "Sconto",
-    tagBackgroundClass: "bg-gray-500",
-  },
-  {
-    id: 5,
-    src: "/assets/products/tvOLED.jpg",
-    title: "Tv OLED",
-    description: "Televisore OLED",
-    price: "1000,00",
-    discount: 5,
-    discountPrice: "250,00",
-    tag: "Acquista con PS5",
-    tagBackgroundClass: "bg-red-600",
-  },
-  {
-    id: 6,
-    src: "/assets/products/tvOLED.jpg",
-    title: "Tv OLED",
-    description: "Televisore OLED",
-    price: "1000,00",
-    discount: 5,
-    discountPrice: "250,00",
-    tag: "Acquista con PS5",
-    tagBackgroundClass: "bg-red-600",
-  },
-];
-
-const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 650, itemsToShow: 2, itemsToScroll: 1 },
-  { width: 700, itemsToShow: 2, itemsToScroll: 1 },
-  { width: 900, itemsToShow: 3, itemsToScroll: 1 },
-  { width: 1000, itemsToShow: 3, itemsToScroll: 1 },
-  { width: 1200, itemsToShow: 3, itemsToScroll: 1 },
-  { width: 1420, itemsToShow: 4, itemsToScroll: 1 },
-  { width: 1600, itemsToShow: 5, itemsToScroll: 1 },
-  { width: 2000, itemsToShow: 4, itemsToScroll: 1 },
-  { width: 2600, itemsToShow: 4, itemsToScroll: 1 },
-];
-
-const BestOffersCarousel = () => {
+const BestOffersCarousel = ({ items, breakPoints }: Props) => {
   return (
     <div className="flex w-full px-1 sm:px-0  justify-center items-center home_page_products_carousel my-8 ">
       <div className="w-full">
@@ -119,7 +21,7 @@ const BestOffersCarousel = () => {
         >
           {items.map((item) => (
             <div
-              className="rounded-md cursor-pointer group hover:shadow-lg  my-4 border-2 relative  p-4"
+              className="rounded-md cursor-pointer group hover:shadow-lg  m-4 border-2 relative  p-4"
               key={item?.id}
             >
               {/* SCONTO TAG HERE */}
