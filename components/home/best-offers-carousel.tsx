@@ -1,6 +1,5 @@
 //@ts-nocheck
 import Image from "next/image";
-import React from "react";
 import Carousel from "react-elastic-carousel";
 
 interface OffersItems {

@@ -1,4 +1,3 @@
-import React from "react";
 import BestOffersCarousel from "./best-offers-carousel";
 
 const BestOffers = () => {

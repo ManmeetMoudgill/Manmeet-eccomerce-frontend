@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import FirstOffer from "../../public/assets/offer_1.webp";
 import SecondOffer from "../../public/assets/offer_2.jpg";
