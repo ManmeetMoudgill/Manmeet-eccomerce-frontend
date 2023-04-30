@@ -9,7 +9,7 @@ import { BsList } from "react-icons/bs";
 import Image from "next/image";
 import UpperNavbarItem from "./sub-components/upper-navbar-item";
 import LowerNavbarItem from "./sub-components/lower-navbar-item";
-
+import SiteLogo from "../../public/assets/site-logo.png";
 const Navbar = () => {
   const [searchText, setSearchText] = useState<string>("");
 
@@ -81,12 +81,7 @@ const Navbar = () => {
               </div>
             </div>
             <div className="__center__mid___container relative hidden xl:flex lg:h-52 lg:w-80 2xl:h-52 2xl:w-96 ">
-              <Image
-                src="/assets/site-logo.png"
-                priority
-                alt="Site Logo"
-                fill
-              />
+              <Image src={SiteLogo} alt="Site Logo" />
             </div>
 
             <div className="__right__mid__container  hidden xl:flex justify-center items-center px-3">

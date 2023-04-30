@@ -7,10 +7,10 @@ import ThirdOffer from "../../public/assets/offer_3.jpg";
 const OffersSection = () => {
   return (
     <section className="flex items-center justify-center mt-8 mb-4">
-      <div className="w-4/5   grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
-        <div className="  mx-4">
+      <div className="w-4/5   grid  grid-cols-1  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ">
+        <div className="  mx-4 my-4">
           <div className="offer__upper__part ">
-            <Image src={FirstOffer} alt="First Offer" />
+            <Image className="w-full" src={FirstOffer} alt="First Offer" />
           </div>
           <div className="offer__lower__part flex-col p-8 bg-customGray-100">
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
@@ -29,9 +29,9 @@ const OffersSection = () => {
           </div>
         </div>
         {/* SECOND OFFER */}
-        <div className=" mx-4">
+        <div className=" mx-4 my-4">
           <div className="offer__upper__part ">
-            <Image src={SecondOffer} alt="First Offer" />
+            <Image className="w-full" src={SecondOffer} alt="First Offer" />
           </div>
           <div className="offer__lower__part flex-col p-8 bg-customGray-100">
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
@@ -50,9 +50,9 @@ const OffersSection = () => {
           </div>
         </div>
         {/* THIRD OFFER */}
-        <div className="mx-4 ">
+        <div className="mx-4 my-4 ">
           <div className="offer__upper__part ">
-            <Image src={ThirdOffer} alt="First Offer" />
+            <Image className="w-full" src={ThirdOffer} alt="First Offer" />
           </div>
           <div className="offer__lower__part flex-col p-8 bg-customGray-100">
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
