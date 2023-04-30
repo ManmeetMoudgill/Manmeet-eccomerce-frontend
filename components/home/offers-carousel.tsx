@@ -21,14 +21,20 @@ const items: Array<OffersItems> = [
 
 const OffersCarousel = (props: Props) => {
   return (
-    <div className="w-full">
-      <Carousel autoPlaySpeed={2500} enableAutoPlay>
+    <div className="w-full ">
+      <Carousel
+        autoPlaySpeed={2500}
+        enableAutoPlay
+        className="border-2 border-red-900"
+      >
         {items.map((item) => (
-          <div className="min-h-[62vh] w-full " key={item.id}>
+          <div className="w-full h-auto min-h-[60vh]" key={item.id}>
             <div
-              className="h-full w-full"
+              className="w-full object-contain h-full"
               style={{
                 backgroundImage: `url(${item.src})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             />
           </div>
