@@ -149,7 +149,7 @@ const BestOffersCarousel = () => {
 
               <div className="flex   flex-col mt-16 items-center justify-center">
                 <div className="flex relative  justify-center items-center">
-                  <div className="flex relative  opacity-1   group-hover:opacity-0 transition-all flex-col mt-16 items-center justify-center">
+                  <div className="flex relative  opacity-1   group-hover:opacity-0  flex-col mt-16 items-center justify-center">
                     <div className="text-blue-400 flex items-center font-medium text-lg">
                       <span>Risparmio il </span>
                       <span className=" font-medium text-blue-400 ml-2">
@@ -165,7 +165,7 @@ const BestOffersCarousel = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="  flex-col absolute hidden group-hover:flex transition-all  top-5 -left-6 ">
+                  <div className="  flex-col absolute hidden group-hover:flex  top-5 -left-6 ">
                     <button className="my-2 flex rounded-full items-center justify-center text-base text-gray-600 p-1 bg-yellowCustom-100">
                       <AiOutlineShoppingCart className="" />
                       <span className="ml-2 uppercase">Aggiungi</span>
