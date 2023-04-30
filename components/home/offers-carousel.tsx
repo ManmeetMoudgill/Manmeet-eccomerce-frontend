@@ -1,7 +1,6 @@
 //@ts-nocheck
 import React from "react";
 import Carousel from "react-elastic-carousel";
-type Props = {};
 
 interface OffersItems {
   id: number;
@@ -19,14 +18,10 @@ const items: Array<OffersItems> = [
   { id: 7, src: "/assets/banner_7.webp", name: "Seventh Banner" },
 ];
 
-const OffersCarousel = (props: Props) => {
+const OffersCarousel = () => {
   return (
     <div className="w-full ">
-      <Carousel
-        autoPlaySpeed={2500}
-        enableAutoPlay
-        className="border-2 border-red-900"
-      >
+      <Carousel autoPlaySpeed={2500} enableAutoPlay>
         {items.map((item) => (
           <div className="w-full h-auto min-h-[60vh]" key={item.id}>
             <div
