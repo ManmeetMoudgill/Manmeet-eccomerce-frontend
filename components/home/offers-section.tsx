@@ -1,16 +1,16 @@
 import Image from "next/image";
 import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
-import firstOffer from "../../public/assets/offer_1.webp";
-import secondOffer from "../../public/assets/offer_2.jpg";
-import thirdOffer from "../../public/assets/offer_3.jpg";
+import FirstOffer from "../../public/assets/offer_1.webp";
+import SecondOffer from "../../public/assets/offer_2.jpg";
+import ThirdOffer from "../../public/assets/offer_3.jpg";
 const OffersSection = () => {
   return (
     <section className="flex items-center justify-center mt-8 mb-4">
       <div className="w-4/5   grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
         <div className="  mx-4">
           <div className="offer__upper__part ">
-            <Image src={firstOffer} alt="First Offer" />
+            <Image src={FirstOffer} alt="First Offer" />
           </div>
           <div className="offer__lower__part flex-col p-8 bg-customGray-100">
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
@@ -31,7 +31,7 @@ const OffersSection = () => {
         {/* SECOND OFFER */}
         <div className=" mx-4">
           <div className="offer__upper__part ">
-            <Image src={secondOffer} alt="First Offer" />
+            <Image src={SecondOffer} alt="First Offer" />
           </div>
           <div className="offer__lower__part flex-col p-8 bg-customGray-100">
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
@@ -52,7 +52,7 @@ const OffersSection = () => {
         {/* THIRD OFFER */}
         <div className="mx-4 ">
           <div className="offer__upper__part ">
-            <Image src={thirdOffer} alt="First Offer" />
+            <Image src={ThirdOffer} alt="First Offer" />
           </div>
           <div className="offer__lower__part flex-col p-8 bg-customGray-100">
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
