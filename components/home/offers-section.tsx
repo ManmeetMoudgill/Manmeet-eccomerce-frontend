@@ -7,7 +7,7 @@ import ThirdOffer from "../../public/assets/offer_3.jpg";
 const OffersSection = () => {
   return (
     <section className="flex items-center justify-center mt-8 mb-4">
-      <div className="px-1 md:px-0 w-full md:w-4/5   grid  grid-cols-1  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ">
+      <div className=" md:px-0 w-full md:w-4/5   grid  grid-cols-1  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ">
         <div className="  mx-4 my-4">
           <div className="offer__upper__part ">
             <Image className="w-full" src={FirstOffer} alt="First Offer" />

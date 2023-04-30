@@ -41,6 +41,12 @@ body {
   box-shadow: none !important;
   background-color:var(--customBrown) !important;
 }
+@media screen and (min-width:320px) and (max-width:640px){
+  .home_page_products_carousel  .rec-dot{
+    width:1rem !important;
+    height:0.3rem !important;
+  }
+}
 .home_page_products_carousel  .rec-dot:hover{
   box-shadow: none !important;
 }

@@ -11,6 +11,8 @@ interface OffersItems {
   price?: string;
   discount?: number;
   discountPrice?: string;
+  tag?: string;
+  tagBackgroundClass?: string;
 }
 
 const items: Array<OffersItems> = [
@@ -22,6 +24,8 @@ const items: Array<OffersItems> = [
     price: "1000,00",
     discount: 10,
     discountPrice: "900,00",
+    tag: "Sconto",
+    tagBackgroundClass: "bg-red-600",
   },
   {
     id: 2,
@@ -31,6 +35,8 @@ const items: Array<OffersItems> = [
     price: "2500,00",
     discount: 8,
     discountPrice: "1400,00",
+    tag: "Sconto",
+    tagBackgroundClass: "bg-red-600",
   },
   {
     id: 3,
@@ -40,6 +46,8 @@ const items: Array<OffersItems> = [
     price: "1000,00",
     discount: 20,
     discountPrice: "700,00",
+    tag: "Acquista con MS6",
+    tagBackgroundClass: "bg-red-600",
   },
   {
     id: 4,
@@ -49,6 +57,8 @@ const items: Array<OffersItems> = [
     price: "800,00",
     discount: 15,
     discountPrice: "620,00",
+    tag: "Sconto",
+    tagBackgroundClass: "bg-red-600",
   },
   {
     id: 5,
@@ -58,6 +68,8 @@ const items: Array<OffersItems> = [
     price: "900,00",
     discount: 5,
     discountPrice: "450,00",
+    tag: "Sconto",
+    tagBackgroundClass: "bg-gray-500",
   },
   {
     id: 5,
@@ -67,6 +79,8 @@ const items: Array<OffersItems> = [
     price: "1000,00",
     discount: 5,
     discountPrice: "250,00",
+    tag: "Acquista con PS5",
+    tagBackgroundClass: "bg-red-600",
   },
   {
     id: 6,
@@ -76,19 +90,27 @@ const items: Array<OffersItems> = [
     price: "1000,00",
     discount: 5,
     discountPrice: "250,00",
+    tag: "Acquista con PS5",
+    tagBackgroundClass: "bg-red-600",
   },
 ];
 
 const breakPoints = [
   { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2, itemsToScroll: 1 },
-  { width: 768, itemsToShow: 4, itemsToScroll: 1 },
-  { width: 1200, itemsToShow: 5, itemsToScroll: 1 },
+  { width: 650, itemsToShow: 2, itemsToScroll: 1 },
+  { width: 700, itemsToShow: 2, itemsToScroll: 1 },
+  { width: 900, itemsToShow: 3, itemsToScroll: 1 },
+  { width: 1000, itemsToShow: 3, itemsToScroll: 1 },
+  { width: 1200, itemsToShow: 3, itemsToScroll: 1 },
+  { width: 1420, itemsToShow: 4, itemsToScroll: 1 },
+  { width: 1600, itemsToShow: 4, itemsToScroll: 1 },
+  { width: 2000, itemsToShow: 4, itemsToScroll: 1 },
+  { width: 2600, itemsToShow: 4, itemsToScroll: 1 },
 ];
 
 const BestOffersCarousel = () => {
   return (
-    <div className="flex w-full justify-center items-center home_page_products_carousel my-8 ">
+    <div className="flex w-full px-1 sm:px-0  justify-center items-center home_page_products_carousel my-8 ">
       <div className="w-full">
         <Carousel
           breakPoints={breakPoints}
@@ -96,11 +118,20 @@ const BestOffersCarousel = () => {
           enableAutoPlay={false}
         >
           {items.map((item) => (
-            <div className=" rounded-md shadow-md my-4  p-4" key={item.id}>
+            <div
+              className=" rounded-md shadow-md my-4 border-2 relative  p-4"
+              key={item?.id}
+            >
+              {/* SCONTO TAG HERE */}
+              <div
+                className={`absolute top-2 left-1 flex justify-center items-center   text-white px-2 py-1 font-bold rounded-2xl ${item?.tagBackgroundClass}`}
+              >
+                <span className="text-sm">{item?.tag}</span>
+              </div>
               {/* UPPER PART */}
               <div className="flex flex-col">
                 <Image
-                  className="my-1 h-[250px] w-[250px] object-contain"
+                  className="my-1 w-[320px] h-[250px] sm:w-[350px] sm:h-[320px]   md:h-[250px] md:w-[250px] 4xl:w-[320px] 4xl:h-[320px] object-contain"
                   src={item?.src}
                   width={200}
                   height={250}
