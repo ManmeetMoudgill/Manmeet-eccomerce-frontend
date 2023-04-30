@@ -1,10 +1,12 @@
 import { informaticaCategories } from "@/constants";
 import React from "react";
 import { SubNavBarItem } from "./navbar-item-sub-navbar";
-
+import { BsFillBoxSeamFill } from "react-icons/bs";
+import { MdMiscellaneousServices } from "react-icons/md";
+import { AiFillGift } from "react-icons/ai";
 const SubNavbarGrid = () => {
   return (
-    <div className="left-0 top-10  flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  py-4">
+    <div className="left-0 top-14 justify-center items-center bg-white flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  pt-4">
       <div className="grid grid-cols-6">
         <div className=" flex flex-col ">
           <nav className="mt-2 min-h-[15vh] ">
@@ -117,6 +119,28 @@ const SubNavbarGrid = () => {
           </nav>
         </div>
         <div className="col-span-2  border-l-4 border-gray-100"></div>
+      </div>
+      <div className=" bg-customGray-100 w-full flex justify-center py-6 ">
+        <div className="grid grid-cols-3 w-3/4">
+          <div className=" flex items-center ">
+            <BsFillBoxSeamFill className="text-xl" />
+            <span className="text-xl ml-3 font-light">
+              Consegna anche al piano
+            </span>
+          </div>
+          <div className=" flex items-center">
+            <MdMiscellaneousServices className="text-xl" />
+            <span className="text-xl ml-3 font-light">
+              Servizi integrativi Serena - fino a 6 anni
+            </span>
+          </div>
+          <div className=" flex items-center">
+            <AiFillGift className="text-xl" />
+            <span className="text-xl ml-3 font-light">
+              Vantaggi speciali per gli Euronics Members
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -112,19 +112,19 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <nav className={`hidden xl:block`}>
-            <ul className="flex  relative  items-center py-2">
-              <LowerNavbarItem title="Informatica" />
-              <LowerNavbarItem title="Foto,Video,Droni" />
-              <LowerNavbarItem title="Gaming" />
-              <LowerNavbarItem title="Telefonia" />
-              <LowerNavbarItem title="Tv e Audio" />
-              <LowerNavbarItem title="Greeen tech" />
-              <LowerNavbarItem title="Lifestyle" />
-            </ul>
-          </nav>
         </div>
       </div>
+      <nav className={`hidden xl:block `}>
+        <ul className="flex  relative  items-center py-2 justify-center">
+          <LowerNavbarItem title="Informatica" />
+          <LowerNavbarItem title="Foto,Video,Droni" />
+          <LowerNavbarItem title="Gaming" />
+          <LowerNavbarItem title="Telefonia" />
+          <LowerNavbarItem title="Tv e Audio" />
+          <LowerNavbarItem title="Greeen tech" />
+          <LowerNavbarItem title="Lifestyle" />
+        </ul>
+      </nav>
     </section>
   );
 };
