@@ -6,7 +6,7 @@ import { MdMiscellaneousServices } from "react-icons/md";
 import { AiFillGift } from "react-icons/ai";
 const SubNavbarGrid = () => {
   return (
-    <div className="left-0 top-14 justify-center items-center bg-white flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  pt-4">
+    <div className="left-0 top-14 pl-52 bg-white flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  pt-4">
       <div className="grid grid-cols-6">
         <div className=" flex flex-col ">
           <nav className="mt-2 min-h-[15vh] ">

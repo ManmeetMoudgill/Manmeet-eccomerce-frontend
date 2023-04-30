@@ -115,7 +115,7 @@ const Navbar = () => {
         </div>
       </div>
       <nav className={`hidden xl:block `}>
-        <ul className="flex  relative  items-center py-2 justify-center">
+        <ul className="flex  relative  items-center py-2 pl-6  2xl:pl-24 3xl:pl-52 ">
           <LowerNavbarItem title="Informatica" />
           <LowerNavbarItem title="Foto,Video,Droni" />
           <LowerNavbarItem title="Gaming" />

@@ -5,7 +5,7 @@ interface LowerNavbarItemProps {
 }
 const LowerNavbarItem = ({ title }: LowerNavbarItemProps) => {
   return (
-    <li className=" group     font-medium  cursor-pointer  py-1 mr-16 3xl:mr-20">
+    <li className=" group hidden xl:block    font-medium  cursor-pointer  py-1 mr-16 3xl:mr-20">
       <a className=" text-blueCustom-100  text-lg 2xl:text-xl tracking-wider  ">
         {title}
       </a>
