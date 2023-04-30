@@ -7,7 +7,7 @@ const BestOffers = () => {
       <div className="w-full lg:w-4/5  flex flex-col items-center justify-center">
         {/* UPPER DIV */}
         <div className="flex items-center justify-center my-4">
-          <h3 className=" text-base sm:text-xl  md:text-3xl text-blueCustom-100 font-bold">
+          <h3 className=" text-lg sm:text-xl  md:text-3xl text-blueCustom-100 font-bold">
             Le Migliore offerte del momento
           </h3>
         </div>

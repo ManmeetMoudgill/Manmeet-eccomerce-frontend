@@ -103,7 +103,7 @@ const breakPoints = [
   { width: 1000, itemsToShow: 3, itemsToScroll: 1 },
   { width: 1200, itemsToShow: 3, itemsToScroll: 1 },
   { width: 1420, itemsToShow: 4, itemsToScroll: 1 },
-  { width: 1600, itemsToShow: 4, itemsToScroll: 1 },
+  { width: 1600, itemsToShow: 5, itemsToScroll: 1 },
   { width: 2000, itemsToShow: 4, itemsToScroll: 1 },
   { width: 2600, itemsToShow: 4, itemsToScroll: 1 },
 ];
