@@ -43,19 +43,23 @@ body {
 }
 @media screen and (min-width:320px) and (max-width:640px){
   .home_page_products_carousel  .rec-dot{
-    width:1rem !important;
+    width:0.5rem !important;
     height:0.3rem !important;
   }
 }
+@media screen and (min-width:320px) and (max-width:640px){
+  .home_page_products_carousel  .rec-dot_active{
+    width:1.5rem !important;
+    height:0.3rem !important;
+    background-color:var(--customYellow) !important;
+    box-shadow: none !important;
+  }
+}
+
 .home_page_products_carousel  .rec-dot:hover{
   box-shadow: none !important;
 }
 
-.home_page_products_carousel  .rec-dot_active{
-  background-color:var(--customYellow) !important;
-  box-shadow: none !important;
-  width:3.5rem !important;
-}
 
 
 /*HOME PAGE  OFFERS CAROUSEL CSS */
@@ -108,6 +112,17 @@ body {
   box-shadow: none !important;
   width:3.5rem !important;
 }
+
+@media screen and (min-width:320px) and (max-width:640px){
+  .offers-carousel  .rec-dot_active{
+    width:1.5rem !important;
+    height:0.3rem !important;
+    background-color:var(--customYellow) !important;
+    box-shadow: none !important;
+  }
+}
 .offers-carousel .rec-slider-container{
   margin:0 !important;
 }
+
+

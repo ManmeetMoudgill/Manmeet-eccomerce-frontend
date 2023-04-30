@@ -21,7 +21,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
         >
           {items.map((item) => (
             <div
-              className="rounded-md cursor-pointer group hover:shadow-lg  m-4 border-2 relative  p-4"
+              className="rounded-md cursor-pointer group hover:shadow-lg m-0  md:m-4 border-2 relative p-0  md:p-4"
               key={item?.id}
             >
               {/* SCONTO TAG HERE */}
@@ -33,7 +33,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
               {/* UPPER PART */}
               <div className="flex flex-col">
                 <Image
-                  className="my-1 w-[320px] h-[250px] sm:w-[350px] sm:h-[320px]   md:h-[250px] md:w-[250px] 4xl:w-[320px] 4xl:h-[320px] object-contain"
+                  className="my-1  w-[320px] h-[250px] sm:w-[350px] sm:h-[320px]   md:h-[250px] md:w-[250px] 4xl:w-[320px] 4xl:h-[320px] object-contain"
                   src={item?.src}
                   width={200}
                   height={250}
