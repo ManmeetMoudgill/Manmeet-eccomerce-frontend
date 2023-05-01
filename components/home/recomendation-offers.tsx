@@ -1,5 +1,5 @@
 import { BreakPoints, OffersItems } from "@/view-model/home";
-import RecomendationOffersCarousel from "./home-recomendation-products-carousel";
+import BestOffersCarousel from "./home-offer-products-carousel";
 
 const items: Array<OffersItems> = [
   {
@@ -171,7 +171,7 @@ const RecomendationOffers = () => {
           </h3>
         </div>
         {/* LOWER DIV PRDOCUTS CAROUSEL */}
-        <RecomendationOffersCarousel items={items} breakPoints={breakPoints} />
+        <BestOffersCarousel items={items} breakPoints={breakPoints} />
       </div>
     </section>
   );

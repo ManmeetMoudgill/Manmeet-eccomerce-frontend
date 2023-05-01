@@ -10,7 +10,7 @@ interface Props {
   breakPoints: Array<BreakPoints>;
 }
 
-const RecomendationOffersCarousel = ({ items, breakPoints }: Props) => {
+const BestOffersCarousel = ({ items, breakPoints }: Props) => {
   return (
     <div className="flex w-full  sm:px-0  justify-center items-center home_page_products_carousel my-8 ">
       <div className="w-full">
@@ -29,7 +29,7 @@ const RecomendationOffersCarousel = ({ items, breakPoints }: Props) => {
               <div
                 className={`absolute top-2 left-1 flex justify-center items-center   text-white px-2 py-1 font-bold rounded-2xl ${item?.tagBackgroundClass}`}
               >
-                <span className="text-sm">{item?.tag}</span>
+                <span className="text-xs md:text-sm">{item?.tag}</span>
               </div>
               {/* UPPER PART */}
               <div className="flex flex-col items-center">
@@ -93,4 +93,4 @@ const RecomendationOffersCarousel = ({ items, breakPoints }: Props) => {
   );
 };
 
-export default RecomendationOffersCarousel;
+export default BestOffersCarousel;
