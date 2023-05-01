@@ -128,7 +128,7 @@ const CompanyBaseShopCarousel = ({
                 backgroundPosition: "48%",
                 backgroundRepeat: "no-repeat",
               }}
-              className="hidden   md:flex  justify-center  md:relative md:left-[10px] py-3 md:py-0 lg:pt-0  w-screen     items-center px-4  lg:pl-10"
+              className="hidden   sm:flex  justify-center  md:relative md:left-[10px] py-3 md:py-0 lg:pt-0  w-screen     items-center px-4  lg:pl-10"
             >
               <div className="w-3/5">
                 <AppleShopContainerContent
