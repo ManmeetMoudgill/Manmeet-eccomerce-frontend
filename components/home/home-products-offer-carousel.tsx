@@ -34,7 +34,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
               {/* UPPER PART */}
               <div className="flex flex-col">
                 <Image
-                  className="my-1  w-[320px] h-[150px] sm:w-[350px] sm:h-[150px]   md:h-[250px] md:w-[250px] 4xl:w-[320px] 4xl:h-[320px] object-contain"
+                  className="my-1 w-[200px] h-[150px] sm:w-[250] sm:h-[150px]   md:h-[250px] md:w-[150px]   4xl:w-[320px] 4xl:h-[320px] object-contain"
                   src={item?.src}
                   width={200}
                   height={250}
