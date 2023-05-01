@@ -13,7 +13,7 @@ const CompanyBaseShop = () => {
     <section className="flex flex-col mb-6">
       <CompanyBaseShopCarousel getCarouselRef={getCarouselRef} />
       <div className="  flex justify-center items-center">
-        <div className="w-full px-2 md:px-0 sm:w-4/5  flex flex-wrap">
+        <div className="w-full px-2 md:px-0 sm:w-4/5  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 ">
           {companiesShop?.map((item, index) => {
             return (
               <div
@@ -24,9 +24,9 @@ const CompanyBaseShop = () => {
                 key={item?.id}
                 className={` ${
                   index === activeIndex ? "bg-gray-100" : ""
-                } flex cursor-pointer justify-center items-center group my-4 sm:my-0 w-[8rem] h-[6rem] sm:w-[10rem]  sm:h-[7rem] md:w-[19rem] md:h-[7rem] hover:bg-gray-100 rec-dot`}
+                } flex cursor-pointer justify-center items-center group my-4 sm:my-0 h-28 hover:bg-gray-100 w-full`}
               >
-                <span className="text-black text-xl md:text-3xl  uppercase group-hover:text-blueCustom-100  transition-all delay-75">
+                <span className="text-black text-xl lg:text-2xl xl:text-3xl  uppercase group-hover:text-blueCustom-100  transition-all delay-75">
                   {item?.slug}
                 </span>
               </div>
