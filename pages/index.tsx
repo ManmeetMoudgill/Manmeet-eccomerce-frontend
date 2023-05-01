@@ -1,4 +1,5 @@
 import AppleShop from "@/components/home/apple-shop";
+import CompanyBaseShopCarousel from "@/components/home/apple-shop-carousel";
 import BestOffers from "@/components/home/best-offers";
 import BestOffersCarousel from "@/components/home/HomeProductsOfferCarousel";
 import OffersCarousel from "@/components/home/offers-carousel";
@@ -29,7 +30,7 @@ export default function Home() {
           <BestOffers />
           <ServicesInformationSection />
           <RecomendationOffers />
-          <AppleShop />
+          <CompanyBaseShopCarousel />
         </main>
       )}
     </>

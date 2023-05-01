@@ -145,3 +145,16 @@ body {
 }
 
 
+
+
+/* HOME PAHE COMPANY BASED SJOP CAROUSEL CSS */
+.company_shop_carousel .rec-arrow-left, .company_shop_carousel .rec-arrow-right{
+  background-color: transparent !important;
+  border:none !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  display: none !important;
+}
+.company_shop_carousel .rec-pagination{
+  display: none !important;
+}

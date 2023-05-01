@@ -17,7 +17,7 @@ const AppleShop = (props: Props) => {
         }}
         className=" hidden sm:flex min-h-[55vh] bg-[#F9F9F9] md:relative md:left-[10px] py-12 md:py-0 lg:pt-0  w-full sm:w-10/12  md:w-4/5  items-center px-4  lg:pl-10"
       >
-        <AppleShopContainerContent />
+        {/* <AppleShopContainerContent /> */}
       </div>
 
       <div
@@ -30,25 +30,43 @@ const AppleShop = (props: Props) => {
         }}
         className="flex sm:hidden h-[90vh]  bg-[#F9F9F9] md:relative md:left-[10px] py-3 md:py-0 lg:pt-0  w-full   md:w-4/5  items-center px-4  lg:pl-10"
       >
-        <AppleShopContainerContent />
+        {/* <AppleShopContainerContent /> */}
       </div>
     </div>
   );
 };
 
-export const AppleShopContainerContent = () => {
+interface AppleShopContainerContentProps {
+  title?: string;
+  smallDesc?: string;
+  largeDesc?: string;
+  link: string;
+}
+
+export const AppleShopContainerContent = ({
+  title,
+  smallDesc,
+  largeDesc,
+}: AppleShopContainerContentProps) => {
   return (
     <div className="flex flex-col justify-center ">
-      <h6 className="text-base md:text-lg my-1  font-light  text-blueCustom-100">
-        Apple
-      </h6>
-      <h3 className="text-2xl md:text-3xl 2xl:text-4xl text-blueCustom-100 font-bold my-2 w-10/12 md:w-2/3">
-        Insieme, realizziamo il tuo mondo
-      </h3>
-      <p className="my-2 text-blueCustom-100 text-lg md:text-xl">
-        Scopri tutti i prodotti apple e scegli quello più adatto a te
-      </p>
-      <button className="flex group max-w-[15rem] rounded-full shadow-sm py-2 lg:py-3 justify-center t bg-blueCustom-100 text-white mt-6 md:mt-8 items-center">
+      {title && (
+        <h6 className="text-base md:text-lg my-1  font-light  text-blueCustom-100">
+          {title}
+        </h6>
+      )}
+
+      {smallDesc && (
+        <h3 className="text-2xl md:text-3xl 2xl:text-4xl text-blueCustom-100 font-bold my-2 w-10/12 md:w-2/3">
+          {smallDesc}
+        </h3>
+      )}
+      {largeDesc && (
+        <p className="my-2 text-blueCustom-100 text-lg md:text-xl">
+          {largeDesc}
+        </p>
+      )}
+      <button className="flex group max-w-[15rem] rounded-full shadow-sm px-3 py-2 lg:py-3 justify-center t bg-blueCustom-100 text-white mt-6 md:mt-8 items-center">
         <span className="text-sm md:text-base  2xl:text-lg">
           Visita il negozio
         </span>
