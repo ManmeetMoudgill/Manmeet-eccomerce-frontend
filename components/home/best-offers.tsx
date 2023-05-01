@@ -1,5 +1,5 @@
 import { BreakPoints, OffersItems } from "@/view-model/home";
-import BestOffersCarousel from "./HomeProductsOfferCarousel";
+import BestOffersCarousel from "./home-products-offer-carousel";
 
 const items: Array<OffersItems> = [
   {
@@ -58,7 +58,7 @@ const items: Array<OffersItems> = [
     tagBackgroundClass: "bg-gray-500",
   },
   {
-    id: 5,
+    id: 6,
     src: "/assets/products/tvOLED.jpg",
     title: "Tv OLED",
     description: "Televisore OLED",
@@ -69,7 +69,7 @@ const items: Array<OffersItems> = [
     tagBackgroundClass: "bg-red-600",
   },
   {
-    id: 6,
+    id: 7,
     src: "/assets/products/tvOLED.jpg",
     title: "Tv OLED",
     description: "Televisore OLED",

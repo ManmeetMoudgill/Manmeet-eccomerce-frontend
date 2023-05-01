@@ -1,5 +1,5 @@
 import { BreakPoints, OffersItems } from "@/view-model/home";
-import ReccomendationOffersCarousel from "./HomeProductsOfferCarousel";
+import ReccomendationOffersCarousel from "./home-products-offer-carousel";
 
 const items: Array<OffersItems> = [
   {
