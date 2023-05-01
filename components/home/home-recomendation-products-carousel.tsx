@@ -12,16 +12,17 @@ interface Props {
 
 const RecomendationOffersCarousel = ({ items, breakPoints }: Props) => {
   return (
-    <div className="flex w-full px-1 sm:px-0  justify-center items-center home_page_products_carousel my-8 ">
+    <div className="flex w-full  sm:px-0  justify-center items-center home_page_products_carousel my-8 ">
       <div className="w-full">
         <Carousel
+          itemPadding={[10, 10, 10, 10]}
           breakPoints={breakPoints}
           autoPlaySpeed={2500}
           enableAutoPlay={false}
         >
           {items.map((item) => (
             <div
-              className="rounded-md cursor-pointer group hover:shadow-lg m-0  md:m-4 border-2 relative p-2  md:p-4"
+              className="rounded-md w-full cursor-pointer group hover:shadow-lg m-0  md:m-4 border-2 relative p-2  md:p-4"
               key={item?.id}
             >
               {/* SCONTO TAG HERE */}
@@ -33,7 +34,7 @@ const RecomendationOffersCarousel = ({ items, breakPoints }: Props) => {
               {/* UPPER PART */}
               <div className="flex flex-col items-center">
                 <Image
-                  className="my-1  w-[320px] h-[200px] sm:w-[350px] sm:h-[320px]   md:h-[250px] md:w-[250px] 4xl:w-[320px] 4xl:h-[320px] object-contain"
+                  className="my-1  w-[200px] h-[150px] sm:w-[250px] sm:h-[200px]   4xl:w-[320px] 4xl:h-[320px] object-contain"
                   src={item?.src}
                   width={200}
                   height={250}

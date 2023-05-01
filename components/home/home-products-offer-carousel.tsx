@@ -12,16 +12,17 @@ interface Props {
 
 const BestOffersCarousel = ({ items, breakPoints }: Props) => {
   return (
-    <div className="flex w-full px-1 sm:px-0  justify-center items-center home_page_products_carousel my-8 ">
-      <div className="w-full">
+    <div className="flex w-full px-0  justify-center border-2 border-red-800 items-center home_page_products_carousel my-8 ">
+      <div className="w-full border-green-900">
         <Carousel
+          itemPadding={[10, 10, 10, 10]}
           breakPoints={breakPoints}
           autoPlaySpeed={2500}
           enableAutoPlay={false}
         >
           {items.map((item) => (
             <div
-              className="rounded-md cursor-pointer group hover:shadow-lg m-0  md:m-4 border-2 relative p-0  md:p-4"
+              className="rounded-md  flex flex-col items-center justify-center  border-2 w-full border-red-900 cursor-pointer group hover:shadow-lg m-0  md:m-4 relative p-0  md:p-4"
               key={item?.id}
             >
               {/* SCONTO TAG HERE */}
@@ -33,7 +34,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
               {/* UPPER PART */}
               <div className="flex flex-col">
                 <Image
-                  className="my-1  w-[320px] h-[200px] sm:w-[350px] sm:h-[320px]   md:h-[250px] md:w-[250px] 4xl:w-[320px] 4xl:h-[320px] object-contain"
+                  className="my-1  w-[320px] h-[150px] sm:w-[350px] sm:h-[150px]   md:h-[250px] md:w-[250px] 4xl:w-[320px] 4xl:h-[320px] object-contain"
                   src={item?.src}
                   width={200}
                   height={250}

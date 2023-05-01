@@ -83,7 +83,7 @@ const items: Array<OffersItems> = [
 
 const breakPoints: Array<BreakPoints> = [
   { width: 1, itemsToShow: 1 },
-  { width: 650, itemsToShow: 2, itemsToScroll: 1 },
+  { width: 650, itemsToShow: 1, itemsToScroll: 1 },
   { width: 700, itemsToShow: 2, itemsToScroll: 1 },
   { width: 900, itemsToShow: 3, itemsToScroll: 1 },
   { width: 1000, itemsToShow: 3, itemsToScroll: 1 },
@@ -96,7 +96,7 @@ const breakPoints: Array<BreakPoints> = [
 const BestOffers = () => {
   return (
     <section className="flex items-center justify-center">
-      <div className="w-full lg:w-4/5  flex flex-col items-center justify-center">
+      <div className="w-full px-0 lg:w-4/5  flex flex-col items-center justify-center">
         {/* UPPER DIV */}
         <div className="flex items-center justify-center my-4">
           <h3 className=" text-lg sm:text-xl  md:text-3xl text-blueCustom-100 font-bold">
