@@ -12,7 +12,7 @@ interface Props {
 
 const BestOffersCarousel = ({ items, breakPoints }: Props) => {
   return (
-    <div className="flex w-full  sm:px-0  justify-center items-center home_page_products_carousel my-8 ">
+    <div className="flex w-full  sm:px-0  justify-center items-center shared__carousel my-8 ">
       <div className="w-full">
         <Carousel
           itemPadding={[10, 10, 10, 10]}
