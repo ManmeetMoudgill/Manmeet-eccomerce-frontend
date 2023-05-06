@@ -2,9 +2,9 @@ import React from "react";
 
 const CompanyInformationSection = () => {
   return (
-    <section className="flex justify-center items-center bg-gray-200">
+    <section className="flex justify-center items-center bg-gray-200 py-10 ">
       <div className=" w-full px-4 sm:px-0 sm:w-3/4">
-        <h1 className="text-center lg:text-left text-xl md:text-2xl lg:text-3xl tracking-wide font-bold text-blueCustom-100 mt-10">
+        <h1 className="text-center lg:text-left text-xl md:text-2xl lg:text-3xl tracking-wide font-bold text-blueCustom-100 ">
           Manmeet Eccomerce il tuo negozio di elettronica, informatica e gaming,
           telefonia
         </h1>

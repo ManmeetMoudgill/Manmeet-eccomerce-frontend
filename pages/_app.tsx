@@ -1,3 +1,4 @@
+import BeforeFooterSection from "@/components/shell/before-footer";
 import Navbar from "@/components/shell/navbar";
 import Newoffers from "@/components/shell/offer-before-navbar";
 import "@/styles/globals.css";
@@ -10,6 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Newoffers />
       <Navbar />
       <Component {...pageProps} />
+      <BeforeFooterSection />
     </>
   );
 }
