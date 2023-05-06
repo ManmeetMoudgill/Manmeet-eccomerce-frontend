@@ -4,12 +4,12 @@ const CompanyInformationSection = () => {
   return (
     <section className="flex justify-center items-center bg-gray-200 py-10 ">
       <div className=" w-full px-4 sm:px-0 sm:w-3/4">
-        <h1 className="text-center lg:text-left text-xl md:text-2xl lg:text-3xl tracking-wide font-bold text-blueCustom-100 ">
+        <h1 className="text-center lg:text-left text-lg md:text-2xl lg:text-3xl tracking-wide font-bold text-blueCustom-100 ">
           Manmeet Eccomerce il tuo negozio di elettronica, informatica e gaming,
           telefonia
         </h1>
         <span className="flex flex-col">
-          <p className="my-2 text-center md:text-left md:my-4 text-base md:text-lg lg:text-xl text-blueCustom-100">
+          <p className="my-2 text-center md:text-left md:my-4 text-sm sm:text-base md:text-lg lg:text-xl text-blueCustom-100">
             Manmeet Eccomerce è{" "}
             <span className="font-semibold">
               un gruppo leader nella distribuzione di elettrodomestici ed
@@ -21,7 +21,7 @@ const CompanyInformationSection = () => {
             ricco di offerte pensate per soddisfare la clientela, anche quella
             più esigente.{" "}
           </p>
-          <p className="my-2 text-center md:text-left md:my-4 text-base md:text-lg lg:text-xl text-blueCustom-100">
+          <p className="my-2 text-center md:text-left md:my-4 text-sm sm:text-base md:text-lg lg:text-xl text-blueCustom-100">
             {" "}
             Non ci occupiamo semplicemente di vendita di elettrodomestici, la
             nostra è una vera e propria filosofia ventennale orientata al
@@ -46,7 +46,7 @@ const CompanyInformationSection = () => {
             desktop. La varietà e la convenienza fanno del nostro uno dei
             migliori negozi di elettronica sul mercato.
           </p>
-          <p className="my-2 text-center md:text-left md:my-4 text-base md:text-lg lg:text-xl text-blueCustom-100">
+          <p className="my-2 text-center md:text-left md:my-4 text-sm sm:text-base md:text-lg lg:text-xl text-blueCustom-100">
             Alla consegna di un nuovo prodotto, Euronics garantisce il ritiro
             dell&apos;apparecchiatura usata e{" "}
             <span className="font-semibold">
