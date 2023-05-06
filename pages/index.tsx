@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { ImSpinner9 } from "react-icons/im";
 import CompanyBaseShop from "@/components/home/company-base-shop";
 import CompaniesLogoCarousel from "@/components/home/companies_logo_carousel";
+import CompanyInformationSection from "@/components/home/information-section";
 export default function Home() {
   const [isPageReady, setIsPageReady] = useState<boolean>(false);
 
@@ -34,6 +35,7 @@ export default function Home() {
           <RecomendationOffers />
           <CompanyBaseShop />
           <CompaniesLogoCarousel />
+          <CompanyInformationSection />
         </main>
       )}
     </>

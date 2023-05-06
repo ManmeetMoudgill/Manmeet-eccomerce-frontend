@@ -89,7 +89,7 @@ const CompaniesLogoCarousel = () => {
     <section className="flex items-center  justify-center shared__carousel  mb-10 ">
       <div className=" flex flex-col items-center justify-center w-full px-4 md:px-0 md:w-4/5 ">
         <div className="flex justify-center items-center mb-8">
-          <p className="text-blueCustom-100 text-center text-xl  md:text-3xl font-bold">
+          <p className="text-blueCustom-100 text-center text-xl  md:text-4xl font-bold">
             Da Euronics Trovi le migiore mache
           </p>
         </div>
