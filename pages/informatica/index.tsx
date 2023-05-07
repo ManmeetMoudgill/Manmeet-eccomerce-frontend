@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
 import BestOffersCarousel from "@/components/home/home-offer-products-carousel";
-import { BreakPoints } from "@/view-model/home";
+import { BreakPoints, OffersItems } from "@/view-model/home";
 
 const items: Array<OffersItems> = [
   {
