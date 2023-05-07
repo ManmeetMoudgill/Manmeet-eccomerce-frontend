@@ -1,5 +1,4 @@
 import { informaticaCategories } from "@/constants";
-import React from "react";
 import { SubNavBarItem } from "./navbar-item-sub-navbar";
 import { BsFillBoxSeamFill } from "react-icons/bs";
 import { MdMiscellaneousServices } from "react-icons/md";

@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import React from "react";
 
 const MacCategoryPage = () => {
   const router = useRouter();

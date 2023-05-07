@@ -1,4 +1,4 @@
-const CompanyInformationSection = () => {
+const InformaticaInformation = () => {
   return (
     <section className="flex justify-center items-center bg-gray-200 py-10 ">
       <div className=" w-full px-4 sm:px-0 sm:w-3/4">
@@ -63,4 +63,4 @@ const CompanyInformationSection = () => {
   );
 };
 
-export default CompanyInformationSection;
+export default InformaticaInformation;

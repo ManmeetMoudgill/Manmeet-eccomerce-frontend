@@ -1,5 +1,4 @@
 //@ts-nocheck
-import React from "react";
 import Image from "next/image";
 import Carousel from "react-elastic-carousel";
 import { BreakPoints } from "@/view-model/home";
