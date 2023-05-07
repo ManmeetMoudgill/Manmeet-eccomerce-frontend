@@ -1,4 +1,4 @@
-import BeforeFooterSection from "@/components/shell/before-footer";
+import BeforeFooterSection from "@/components/shell/footer";
 import Navbar from "@/components/shell/navbar";
 import Newoffers from "@/components/shell/offer-before-navbar";
 import "@/styles/globals.css";

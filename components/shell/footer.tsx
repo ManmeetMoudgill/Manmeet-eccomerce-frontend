@@ -11,6 +11,7 @@ import { TfiLinkedin } from "react-icons/tfi";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiFillYoutube } from "react-icons/ai";
 import Image from "next/image";
+import PaymentsAfterFooter from "./payments-after-footer";
 const InformazioniList = [
   {
     id: 1,
@@ -138,117 +139,120 @@ const LeftPartSectionFooterItem = ({
 const BeforeFooterSection = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   return (
-    <footer className=" bg-blueCustom-200 justify-center flex  items-center pt-14 pb-14">
-      <div className=" w-11/12 sm:w-full sm:px-6  lg:w-full 2xl:w-4/5   flex flex-col">
-        <div className="flex flex-col xl:flex-row border-b-[1px] border-gray-50 pb-4 lg:pb-10">
-          <div className="xl:w-3/12 border-b-[1px] md:border-b-0 pb-8 md:pb-0 md:border-r-[1px]  border-gray-50 flex flex-col md:flex-row md:flex-wrap xl:flex-col  md:pr-0 2xl:pr-8">
-            <LeftPartSectionFooterItem
-              Icon={AiOutlineLaptop}
-              title="Prenota e ritira in negozio"
-            />
-            <LeftPartSectionFooterItem
-              Icon={MdMobiledataOff}
-              title="Ritira RAEE gratuito"
-            />
-            <LeftPartSectionFooterItem
-              Icon={BiHomeAlt2}
-              title="Consegna a domicilio"
-            />
-            <LeftPartSectionFooterItem
-              Icon={RiSecurePaymentLine}
-              title="Pagamenti con finanziamento"
-            />
-            <LeftPartSectionFooterItem
-              Icon={BsHeadphones}
-              title="Assistenza clienti"
-            />
-          </div>
-          {/* FOR SMALL DEVICES */}
-          <div className="flex lg:hidden flex-col ">
-            <RightPartSectionFooterItemForSmallDevices
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              headingTitle="Informazioni"
-              listItem={InformazioniList}
-            />
-            <RightPartSectionFooterItemForSmallDevices
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              headingTitle="Per i tuoi acquisti"
-              listItem={perTuoiAcquisit}
-            />
-            <RightPartSectionFooterItemForSmallDevices
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              headingTitle="Area Clienti"
-              listItem={areaCliente}
-            />
-            <RightPartSectionFooterItemForSmallDevices
-              selectedCategory={selectedCategory}
-              setSelectedCategory={setSelectedCategory}
-              headingTitle="Privay"
-              listItem={privacy}
-            />
-          </div>
-
-          {/* large devices */}
-          <div className=" xl:w-3/4 hidden lg:grid xl:pl-0 2xl:pl-16  grid-cols-4  ">
-            <RightPartSectionFooterItem
-              headingTitle="Informazioni"
-              listItem={InformazioniList}
-            />
-
-            <RightPartSectionFooterItem
-              headingTitle="Per i tuoi acquisti"
-              listItem={perTuoiAcquisit}
-            />
-            <RightPartSectionFooterItem
-              headingTitle="Area Clienti"
-              listItem={areaCliente}
-            />
-            <RightPartSectionFooterItem
-              headingTitle="Privay"
-              listItem={privacy}
-            />
-          </div>
-        </div>
-        <div className=" flex flex-col md:flex-row justify-between">
-          <div className=" flex flex-col">
-            <p className="my-5 text-base lg:text-xl text-white font-semibold">
-              Seguici sui social
-            </p>
-            <div className="flex">
-              <SocialMediaIcon Icon={FaFacebookF} title="Facebook" />
-              <SocialMediaIcon Icon={TfiLinkedin} title="Linkedin" />
-              <SocialMediaIcon Icon={AiFillInstagram} title="Instagram" />
-              <SocialMediaIcon Icon={AiOutlineWhatsApp} title="Whatsapp" />
-              <SocialMediaIcon Icon={AiFillYoutube} title="Youtube" />
-            </div>
-          </div>
-          <div className="">
-            <p className="my-5 text-base lg:text-xl text-white font-semibold">
-              Scarica la nuova app
-            </p>
-            <div className="flex md:justify-center items-center">
-              <Image
-                className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
-                src="/assets/socials/apple_store.webp"
-                width={130}
-                height={100}
-                alt="Apple Store"
+    <>
+      <footer className=" bg-blueCustom-200 justify-center flex  items-center pt-14 pb-14">
+        <div className=" w-11/12 sm:w-full sm:px-6  lg:w-full 2xl:w-4/5   flex flex-col">
+          <div className="flex flex-col xl:flex-row border-b-[1px] border-gray-50 pb-4 lg:pb-10">
+            <div className="xl:w-3/12 border-b-[1px] md:border-b-0 pb-8 md:pb-0 md:border-r-[1px]  border-gray-50 flex flex-col md:flex-row md:flex-wrap xl:flex-col  md:pr-0 2xl:pr-8">
+              <LeftPartSectionFooterItem
+                Icon={AiOutlineLaptop}
+                title="Prenota e ritira in negozio"
               />
-              <Image
-                className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
-                src="/assets/socials/google_play_store.webp"
-                width={130}
-                height={100}
-                alt="Google Play-Store"
+              <LeftPartSectionFooterItem
+                Icon={MdMobiledataOff}
+                title="Ritira RAEE gratuito"
+              />
+              <LeftPartSectionFooterItem
+                Icon={BiHomeAlt2}
+                title="Consegna a domicilio"
+              />
+              <LeftPartSectionFooterItem
+                Icon={RiSecurePaymentLine}
+                title="Pagamenti con finanziamento"
+              />
+              <LeftPartSectionFooterItem
+                Icon={BsHeadphones}
+                title="Assistenza clienti"
+              />
+            </div>
+            {/* FOR SMALL DEVICES */}
+            <div className="flex lg:hidden flex-col ">
+              <RightPartSectionFooterItemForSmallDevices
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+                headingTitle="Informazioni"
+                listItem={InformazioniList}
+              />
+              <RightPartSectionFooterItemForSmallDevices
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+                headingTitle="Per i tuoi acquisti"
+                listItem={perTuoiAcquisit}
+              />
+              <RightPartSectionFooterItemForSmallDevices
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+                headingTitle="Area Clienti"
+                listItem={areaCliente}
+              />
+              <RightPartSectionFooterItemForSmallDevices
+                selectedCategory={selectedCategory}
+                setSelectedCategory={setSelectedCategory}
+                headingTitle="Privay"
+                listItem={privacy}
+              />
+            </div>
+
+            {/* large devices */}
+            <div className=" xl:w-3/4 hidden lg:grid xl:pl-0 2xl:pl-16  grid-cols-4  ">
+              <RightPartSectionFooterItem
+                headingTitle="Informazioni"
+                listItem={InformazioniList}
+              />
+
+              <RightPartSectionFooterItem
+                headingTitle="Per i tuoi acquisti"
+                listItem={perTuoiAcquisit}
+              />
+              <RightPartSectionFooterItem
+                headingTitle="Area Clienti"
+                listItem={areaCliente}
+              />
+              <RightPartSectionFooterItem
+                headingTitle="Privay"
+                listItem={privacy}
               />
             </div>
           </div>
+          <div className=" flex flex-col md:flex-row justify-between">
+            <div className=" flex flex-col">
+              <p className="my-5 text-base lg:text-xl text-white font-semibold">
+                Seguici sui social
+              </p>
+              <div className="flex">
+                <SocialMediaIcon Icon={FaFacebookF} title="Facebook" />
+                <SocialMediaIcon Icon={TfiLinkedin} title="Linkedin" />
+                <SocialMediaIcon Icon={AiFillInstagram} title="Instagram" />
+                <SocialMediaIcon Icon={AiOutlineWhatsApp} title="Whatsapp" />
+                <SocialMediaIcon Icon={AiFillYoutube} title="Youtube" />
+              </div>
+            </div>
+            <div className="">
+              <p className="my-5 text-base lg:text-xl text-white font-semibold">
+                Scarica la nuova app
+              </p>
+              <div className="flex md:justify-center items-center">
+                <Image
+                  className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
+                  src="/assets/socials/apple_store.webp"
+                  width={130}
+                  height={100}
+                  alt="Apple Store"
+                />
+                <Image
+                  className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
+                  src="/assets/socials/google_play_store.webp"
+                  width={130}
+                  height={100}
+                  alt="Google Play-Store"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+      <PaymentsAfterFooter />
+    </>
   );
 };
 
