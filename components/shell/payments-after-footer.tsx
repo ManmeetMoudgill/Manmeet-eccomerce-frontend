@@ -5,7 +5,7 @@ import React from "react";
 const PaymentsAfterFooter = () => {
   return (
     <div className="flex justify-center items-center py-1">
-      <div className="w-3/4  justify-center my-4 flex items-center ">
+      <div className="w-full px-0 md:px-0 md:w-3/4  justify-center my-4 flex items-center flex-wrap ">
         <Image
           className="mx-5 hover:scale-125 cursor-pointer transition-all duration-500 ease-in-out"
           src="/assets/payments_methods/maestro.webp"

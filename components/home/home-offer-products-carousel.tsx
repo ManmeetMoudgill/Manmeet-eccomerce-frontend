@@ -53,12 +53,14 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
               <div className="flex   flex-col mt-16 items-center justify-center">
                 <div className="flex relative  justify-center items-center">
                   <div className="flex relative  opacity-1   group-hover:opacity-0  flex-col mt-16 items-center justify-center">
-                    <div className="text-blue-400 flex items-center font-medium text-base md:text-lg">
-                      <span>Risparmio il </span>
-                      <span className=" font-medium text-blue-400 ml-2">
-                        -{item?.discount}%
-                      </span>
-                    </div>
+                    {item?.discount > 0 && (
+                      <div className="text-blue-400 flex items-center font-medium text-base md:text-lg">
+                        <span>Risparmio il </span>
+                        <span className=" font-medium text-blue-400 ml-2">
+                          -{item?.discount}%
+                        </span>
+                      </div>
+                    )}
                     <div className="flex items-center justify-center ">
                       <span className=" text-base md:text-lg px-2 line-through text-gray-600">
                         € {item?.price}
