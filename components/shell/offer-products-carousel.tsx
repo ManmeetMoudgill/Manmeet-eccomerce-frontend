@@ -22,7 +22,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
         >
           {items.map((item) => (
             <div
-              className="rounded-md w-full  border-2 border-red-900 cursor-pointer group hover:shadow-lg m-0  md:m-4  relative p-2  md:p-4"
+              className="rounded-md w-full border-[2px] border-gray-200  cursor-pointer group hover:shadow-lg m-0  md:m-4  relative p-2  md:p-4"
               key={item?.id}
             >
               {/* SCONTO TAG HERE */}
@@ -65,7 +65,13 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
                     </div>
 
                     <div className="flex items-center justify-center ">
-                      <span className=" text-base md:text-lg px-2 line-through text-gray-600">
+                      <span
+                        className={`text-base md:text-lg px-2 ${
+                          item?.discountPrice
+                            ? "line-through text-gray-600"
+                            : "text-black font-bold"
+                        } `}
+                      >
                         € {item?.price}
                       </span>
                       <span
@@ -78,7 +84,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
                     </div>
                   </div>
                   <div
-                    className={`flex-col absolute hidden group-hover:flex  top-5 -left-10 md:${
+                    className={`flex-col absolute hidden group-hover:flex  top-5 md:${
                       item?.discountPrice ? "-left-6" : "-left-16"
                     }`}
                   >

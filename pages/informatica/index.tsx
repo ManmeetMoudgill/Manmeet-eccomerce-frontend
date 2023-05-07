@@ -7,7 +7,7 @@ import { BreakPoints, OffersItems } from "@/view-model/home";
 const items: Array<OffersItems> = [
   {
     id: 1,
-    src: "/assets/products/watches/Amazfit_3.jpg",
+    src: "/assets/categories/informatica/offers/notebook.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -18,7 +18,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 2,
-    src: "/assets/products/watches/Amazfit_3.jpg",
+    src: "/assets/categories/informatica/offers/notebook_2.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "2500,00",
@@ -29,7 +29,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 3,
-    src: "/assets/products/watches/Amazfit_3.jpg",
+    src: "/assets/categories/informatica/offers/notebook_3.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -40,7 +40,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 4,
-    src: "/assets/products/watches/Amazfit_4.jpg",
+    src: "/assets/categories/informatica/offers/tablet_1.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "800,00",
@@ -49,7 +49,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 5,
-    src: "/assets/products/watches/Amazfit_5.jpg",
+    src: "/assets/categories/informatica/offers/mac.webp",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "900,00",
@@ -60,7 +60,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 6,
-    src: "/assets/products/watches/Amazfit_6.jpg",
+    src: "/assets/categories/informatica/offers/tablet_2.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -71,7 +71,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 7,
-    src: "/assets/products/watches/Amazfit_7.jpg",
+    src: "/assets/categories/informatica/offers/tablet_3.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -82,7 +82,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 8,
-    src: "/assets/products/watches/Amazfit_8.jpg",
+    src: "/assets/categories/informatica/offers/mac_2.webp",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -91,7 +91,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 9,
-    src: "/assets/products/watches/Amazfit_9.jpg",
+    src: "/assets/categories/informatica/offers/notebook_4.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -102,7 +102,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 10,
-    src: "/assets/products/watches/Amazfit_10.jpg",
+    src: "/assets/categories/informatica/offers/notebook_5.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -111,7 +111,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 11,
-    src: "/assets/products/watches/Amazfit_11.jpg",
+    src: "/assets/categories/informatica/offers/notebook_6.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -122,7 +122,7 @@ const items: Array<OffersItems> = [
   },
   {
     id: 12,
-    src: "/assets/products/watches/Amazfit_12.jpg",
+    src: "/assets/categories/informatica/offers/notebook_7.jpg",
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
@@ -133,7 +133,34 @@ const items: Array<OffersItems> = [
   },
   {
     id: 13,
-    src: "/assets/products/watches/Amazfit_13.jpg",
+    src: "/assets/categories/informatica/offers/notebook_8.jpg",
+    title: "Smart Watch",
+    description: "Televisore OLED",
+    price: "1000,00",
+    tag: "Acquista con PS5",
+    tagBackgroundClass: "bg-red-600",
+  },
+  {
+    id: 14,
+    src: "/assets/categories/informatica/offers/notebook_9.jpg",
+    title: "Smart Watch",
+    description: "Televisore OLED",
+    price: "1000,00",
+    tag: "Acquista con PS5",
+    tagBackgroundClass: "bg-red-600",
+  },
+  {
+    id: 15,
+    src: "/assets/categories/informatica/offers/notebook_10.jpg",
+    title: "Smart Watch",
+    description: "Televisore OLED",
+    price: "1000,00",
+    tag: "Acquista con PS5",
+    tagBackgroundClass: "bg-red-600",
+  },
+  {
+    id: 16,
+    src: "/assets/categories/informatica/offers/tablet_4.jpg",
     title: "Smart Watch",
     description: "Televisore OLED",
     price: "1000,00",
