@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,6 +16,7 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
   overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
 
 }
 

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { MdMobiledataOff } from "react-icons/md";

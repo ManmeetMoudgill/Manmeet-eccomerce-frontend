@@ -1,9 +1,10 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 
 const PaymentsAfterFooter = () => {
   return (
-    <div className="flex justify-center items-center py-4">
+    <div className="flex justify-center items-center py-1">
       <div className="w-3/4  justify-center my-4 flex items-center ">
         <Image
           className="mx-5 hover:scale-125 cursor-pointer transition-all duration-500 ease-in-out"

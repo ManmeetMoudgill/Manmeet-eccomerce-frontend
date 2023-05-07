@@ -44,7 +44,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
                   <p className="my-1 text-base font-extralight text-gray-600">
                     {item?.title}
                   </p>
-                  <span className="text-lg md:text-xl font-light">
+                  <span className="text-lg text-center md:text-xl font-light">
                     {item?.description}
                   </span>
                 </div>
