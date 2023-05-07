@@ -231,14 +231,14 @@ const BeforeFooterSection = () => {
             </p>
             <div className="flex md:justify-center items-center">
               <Image
-                className="mr-5 h-[40px]  lg:h-[47px]"
+                className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
                 src="/assets/socials/apple_store.webp"
                 width={130}
                 height={100}
                 alt="Apple Store"
               />
               <Image
-                className="mr-5 h-[40px]  lg:h-[47px]"
+                className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
                 src="/assets/socials/google_play_store.webp"
                 width={130}
                 height={100}
@@ -261,7 +261,7 @@ export const SocialMediaIcon = ({
   title: string;
 }): React.ReactElement => {
   return (
-    <div className="w-10 h-10 lg:w-12 lg:h-12 mr-4 lg:mr-8 rounded-full bg-blueCustom-100 flex justify-center items-center">
+    <div className="w-10 cursor-pointer hover:-translate-y-2 transition-all delay-75 duration-300 h-10 lg:w-12 lg:h-12 mr-4 lg:mr-8 rounded-full bg-blueCustom-100 flex justify-center items-center">
       <Icon className="text-white text-xl md:text-2xl" />
     </div>
   );
