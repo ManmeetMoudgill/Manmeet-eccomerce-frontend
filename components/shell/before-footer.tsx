@@ -1,11 +1,16 @@
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlineLaptop } from "react-icons/ai";
 import { MdMobiledataOff } from "react-icons/md";
 import { BiHomeAlt2 } from "react-icons/bi";
 import { RiSecurePaymentLine } from "react-icons/ri";
 import { BsHeadphones } from "react-icons/bs";
 import { IconType } from "react-icons";
-
+import { FaFacebookF } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { TfiLinkedin } from "react-icons/tfi";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { AiFillYoutube } from "react-icons/ai";
+import Image from "next/image";
 const InformazioniList = [
   {
     id: 1,
@@ -207,8 +212,58 @@ const BeforeFooterSection = () => {
             />
           </div>
         </div>
+        <div className=" flex flex-col md:flex-row justify-between">
+          <div className=" flex flex-col">
+            <p className="my-5 text-base lg:text-xl text-white font-semibold">
+              Seguici sui social
+            </p>
+            <div className="flex">
+              <SocialMediaIcon Icon={FaFacebookF} title="Facebook" />
+              <SocialMediaIcon Icon={TfiLinkedin} title="Linkedin" />
+              <SocialMediaIcon Icon={AiFillInstagram} title="Instagram" />
+              <SocialMediaIcon Icon={AiOutlineWhatsApp} title="Whatsapp" />
+              <SocialMediaIcon Icon={AiFillYoutube} title="Youtube" />
+            </div>
+          </div>
+          <div className="">
+            <p className="my-5 text-base lg:text-xl text-white font-semibold">
+              Scarica la nuova app
+            </p>
+            <div className="flex md:justify-center items-center">
+              <Image
+                className="mr-5 h-[40px]  lg:h-[47px]"
+                src="/assets/socials/apple_store.webp"
+                width={130}
+                height={100}
+                alt="Apple Store"
+              />
+              <Image
+                className="mr-5 h-[40px]  lg:h-[47px]"
+                src="/assets/socials/google_play_store.webp"
+                width={130}
+                height={100}
+                alt="Google Play-Store"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
+  );
+};
+
+/* SOCIAL COMPONENTS */
+
+export const SocialMediaIcon = ({
+  Icon,
+}: {
+  Icon: IconType;
+  title: string;
+}): React.ReactElement => {
+  return (
+    <div className="w-10 h-10 lg:w-12 lg:h-12 mr-4 lg:mr-8 rounded-full bg-blueCustom-100 flex justify-center items-center">
+      <Icon className="text-white text-xl md:text-2xl" />
+    </div>
   );
 };
 
