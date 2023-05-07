@@ -1,11 +1,14 @@
 import { SubNavbar } from "./navbar-item-sub-navbar";
-
+import Link from "next/link";
 interface LowerNavbarItemProps {
   title: string;
 }
 const LowerNavbarItem = ({ title }: LowerNavbarItemProps) => {
   return (
-    <li className=" group hidden xl:block    font-medium  cursor-pointer  py-1 mr-16 3xl:mr-20">
+    <Link
+      href="/informatica"
+      className=" group hidden xl:block    font-medium  cursor-pointer  py-1 mr-16 3xl:mr-20"
+    >
       <a className=" text-blueCustom-100  text-lg 2xl:text-xl tracking-wider  ">
         {title}
       </a>
@@ -15,7 +18,7 @@ const LowerNavbarItem = ({ title }: LowerNavbarItemProps) => {
       ></div>
 
       <SubNavbar title={title} />
-    </li>
+    </Link>
   );
 };
 
