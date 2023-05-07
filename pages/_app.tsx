@@ -10,7 +10,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Newoffers />
       <Navbar />
-      <Component {...pageProps} />
+      <div className="min-h-[20vh]">
+        <Component {...pageProps} />
+      </div>
       <BeforeFooterSection />
     </>
   );
