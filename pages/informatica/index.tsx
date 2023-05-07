@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { IoIosArrowForward } from "react-icons/io";
-import BestOffersCarousel from "@/components/home/home-offer-products-carousel";
+import BestOffersCarousel from "@/components/shell/offer-products-carousel";
 import { BreakPoints, OffersItems } from "@/view-model/home";
 
 const items: Array<OffersItems> = [
@@ -44,7 +44,6 @@ const items: Array<OffersItems> = [
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "800,00",
-    discountPrice: "620,00",
     tag: "Sconto",
     tagBackgroundClass: "bg-red-600",
   },
@@ -87,7 +86,6 @@ const items: Array<OffersItems> = [
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
-    discountPrice: "250,00",
     tag: "Acquista con PS5",
     tagBackgroundClass: "bg-red-600",
   },
@@ -108,7 +106,6 @@ const items: Array<OffersItems> = [
     title: "Smart Watch",
     description: "AMAZFIT - Smart Watch GTR 4-SUPERSPEED BLACK",
     price: "1000,00",
-    discountPrice: "250,00",
     tag: "Acquista con PS5",
     tagBackgroundClass: "bg-red-600",
   },
@@ -140,7 +137,6 @@ const items: Array<OffersItems> = [
     title: "Smart Watch",
     description: "Televisore OLED",
     price: "1000,00",
-    discountPrice: "250,00",
     tag: "Acquista con PS5",
     tagBackgroundClass: "bg-red-600",
   },
