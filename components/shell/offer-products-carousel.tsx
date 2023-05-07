@@ -34,10 +34,10 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
               {/* UPPER PART */}
               <div className="flex flex-col items-center">
                 <Image
-                  className="my-1  w-[200px] h-[150px] sm:w-[250] sm:h-[150px]   md:h-[250px] md:w-[150px]   4xl:w-[320px] 4xl:h-[320px] object-contain"
+                  className="my-1  w-[200px] h-[150px] sm:w-[250] sm:h-[150px]   md:h-[250px] md:w-[150px]  4xl:w-[320px] 4xl:h-[320px] object-contain"
                   src={item?.src}
                   width={200}
-                  height={250}
+                  height={200}
                   alt={item?.title}
                 />
                 <div className="flex justify-center items-center flex-col">
@@ -50,7 +50,7 @@ const BestOffersCarousel = ({ items, breakPoints }: Props) => {
                 </div>
               </div>
 
-              <div className="flex   flex-col mt-16 items-center justify-center">
+              <div className="flex   flex-col mt-2 xl:mt-16 items-center justify-center">
                 <div className="flex relative  justify-center items-center">
                   <div className="flex relative  opacity-1   group-hover:opacity-0  flex-col mt-16 items-center justify-center">
                     <div

@@ -7,7 +7,7 @@ const OffersSection = () => {
   return (
     <section className="flex items-center justify-center mt-8 mb-4">
       <div className=" md:px-0 w-full md:w-4/5   grid  grid-cols-1  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ">
-        <div className="border-2 border-red-900  mx-4 my-4">
+        <div className=" mx-4 my-4">
           <div className="offer__upper__part ">
             <Image className="w-full" src={FirstOffer} alt="First Offer" />
           </div>
@@ -28,7 +28,7 @@ const OffersSection = () => {
           </div>
         </div>
         {/* SECOND OFFER */}
-        <div className=" border-2 border-red-900 mx-4 my-4">
+        <div className=" mx-4 my-4">
           <div className="offer__upper__part ">
             <Image className="w-full" src={SecondOffer} alt="First Offer" />
           </div>
@@ -49,7 +49,7 @@ const OffersSection = () => {
           </div>
         </div>
         {/* THIRD OFFER */}
-        <div className=" border-2 border-red-900 mx-4 my-4 ">
+        <div className=" mx-4 my-4 ">
           <div className="offer__upper__part ">
             <Image className="w-full" src={ThirdOffer} alt="First Offer" />
           </div>

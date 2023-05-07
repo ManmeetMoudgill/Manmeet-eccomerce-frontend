@@ -8,36 +8,36 @@ const PaymentsAfterFooter = () => {
         <Image
           className="mx-5 w-auto h-auto hover:scale-125 cursor-pointer transition-all duration-500 ease-in-out"
           src="/assets/payments_methods/maestro.webp"
-          width={80}
-          height={80}
+          width={50}
+          height={50}
           alt="maestro"
         />
         <Image
           className="mx-5  w-auto h-auto hover:scale-125 cursor-pointer transition-all duration-500 ease-in-out "
           src="/assets/payments_methods/visa.webp"
-          width={80}
-          height={80}
+          width={50}
+          height={50}
           alt="visa"
         />
         <Image
           className="mx-5  w-auto h-auto hover:scale-125 cursor-pointer transition-all duration-500 ease-in-out "
           src="/assets/payments_methods/mastercard.webp"
-          width={80}
-          height={80}
+          width={50}
+          height={50}
           alt="Mastercard"
         />
         <Image
           className="mx-5  w-auto h-auto hover:scale-125 cursor-pointer transition-all duration-500 ease-in-out "
           src="/assets/payments_methods/paypal.webp"
-          width={80}
-          height={80}
+          width={50}
+          height={50}
           alt="Pay Pal"
         />
         <Image
           className="mx-5  w-auto h-auto hover:scale-125 cursor-pointer transition-all duration-500 ease-in-out "
           src="/assets/payments_methods/verifiedbyvisa.webp"
-          width={80}
-          height={80}
+          width={50}
+          height={50}
           alt="Verified by visa"
         />
       </div>

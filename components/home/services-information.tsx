@@ -3,7 +3,7 @@ const CourierService = "/assets/services-information/courier-service.jpg";
 const OnlineService = "/assets/services-information/online-service.jpg";
 const ServicesInformationSection = () => {
   return (
-    <section className="flex justify-center items-center my-8 mb-4 ">
+    <section className="z-10 flex justify-center items-center my-8 mb-4 ">
       <div className=" w-full md:w-4/5   grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-10 px-4 ">
         <div
           className="  min-h-[35vh] "

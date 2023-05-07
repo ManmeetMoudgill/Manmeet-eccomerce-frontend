@@ -24,9 +24,9 @@ const CompanyBaseShop = () => {
                 key={item?.id}
                 className={` ${
                   index === activeIndex ? "bg-gray-100" : ""
-                } flex cursor-pointer justify-center items-center group py-4 md:py-0 md:h-28 hover:bg-gray-100 w-full`}
+                } flex cursor-pointer justify-center items-center group py-4 md:py-0 md:h-20 2xl:h-28 hover:bg-gray-100 w-full`}
               >
-                <span className="text-black text-lg md:text-xl lg:text-2xl xl:text-3xl  uppercase group-hover:text-blueCustom-100  transition-all delay-75">
+                <span className="text-black text-lg md:text-xl  2xl:text-3xl  uppercase group-hover:text-blueCustom-100  transition-all delay-75">
                   {item?.slug}
                 </span>
               </div>
