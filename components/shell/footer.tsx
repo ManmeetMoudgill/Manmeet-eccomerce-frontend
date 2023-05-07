@@ -234,17 +234,19 @@ const BeforeFooterSection = () => {
               </p>
               <div className="flex md:justify-center items-center">
                 <Image
-                  className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
+                  className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  w-auto lg:h-[47px]"
                   src="/assets/socials/apple_store.webp"
                   width={130}
-                  height={100}
+                  height={40}
+                  priority
                   alt="Apple Store"
                 />
                 <Image
-                  className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px]  lg:h-[47px]"
+                  className="hover:scale-90 transition-all delay-75 duration-200 cursor-pointer mr-5 h-[40px] w-auto  lg:h-[47px]"
                   src="/assets/socials/google_play_store.webp"
+                  priority
                   width={130}
-                  height={100}
+                  height={40}
                   alt="Google Play-Store"
                 />
               </div>

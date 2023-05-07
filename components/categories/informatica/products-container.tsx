@@ -125,11 +125,11 @@ const ProductsSection = () => {
                 className="flex flex-col sm:mx-3 border-[2px] border-gray-100 lg:mx-6 my-4  cursor-pointer hover:shadow-lg transition-all delay-75 duration-500 ease-out rounded-md items-center justify-center pt-4 pb-10 px-4 "
               >
                 <Image
-                  className="mb-3 h-[150px] object-contain md:h-[200px] 2xl:h-[250px]"
+                  className="mb-3 h-auto w-auto object-contain "
                   src={product?.categorySrc}
                   alt={product?.category}
-                  width={280}
-                  height={200}
+                  width={200}
+                  height={180}
                 />
                 <p className="text-base md:text-lg text-center font-semibold ">
                   {product?.category}
