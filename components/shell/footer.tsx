@@ -291,7 +291,10 @@ export const RightPartSectionFooterItem = ({
       <ul className="mt-4 flex flex-col list-none">
         {listItem.map((item) => {
           return (
-            <li key={item.id} className="my-[2px] text-white text-base">
+            <li
+              key={item.id}
+              className="cursor-pointer my-[2px] text-white text-base"
+            >
               {item.item}
             </li>
           );
@@ -334,7 +337,10 @@ export const RightPartSectionFooterItemForSmallDevices = ({
         {selectedCategory === headingTitle
           ? listItem.map((item) => {
               return (
-                <li key={item.id} className=" my-[2px] text-white text-base">
+                <li
+                  key={item.id}
+                  className=" cursor-pointer my-[2px] text-white text-base"
+                >
                   {item.item}
                 </li>
               );
