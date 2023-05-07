@@ -7,7 +7,7 @@ const OffersSection = () => {
   return (
     <section className="flex items-center justify-center mt-8 mb-4">
       <div className=" md:px-0 w-full md:w-4/5   grid  grid-cols-1  md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  ">
-        <div className="  mx-4 my-4">
+        <div className="border-2 border-red-900  mx-4 my-4">
           <div className="offer__upper__part ">
             <Image className="w-full" src={FirstOffer} alt="First Offer" />
           </div>
@@ -15,20 +15,20 @@ const OffersSection = () => {
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
               Speciale
             </h3>
-            <h4 className="my-1 text-3xl font-bold text-blueCustom-100">
+            <h4 className="my-1 text-xl 2xl:text-3xl font-bold text-blueCustom-100">
               Piccoli Elettrodomestici
             </h4>
-            <span className="my-2 text-lg text-customBlue-100 font-light">
+            <span className="my-2 text-base 2xl:text-lg text-customBlue-100 font-light">
               Scopri le offerte
             </span>
             <button className="my-6 bg-yellowCustom-100 p-2 rounded-2xl shadow-md flex items-center ">
-              <span>Scopri di più</span>
-              <IoIosArrowForward className="text-xl ml-2" />
+              <span className="text-sm 2xl:text-base">Scopri di più</span>
+              <IoIosArrowForward className="text-base 2xl:text-xl ml-2" />
             </button>
           </div>
         </div>
         {/* SECOND OFFER */}
-        <div className=" mx-4 my-4">
+        <div className=" border-2 border-red-900 mx-4 my-4">
           <div className="offer__upper__part ">
             <Image className="w-full" src={SecondOffer} alt="First Offer" />
           </div>
@@ -36,20 +36,20 @@ const OffersSection = () => {
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
               Offerta Speciale
             </h3>
-            <h4 className="my-1 text-3xl font-bold text-blueCustom-100">
+            <h4 className="my-1 text-xl 2xl:text-3xl font-bold text-blueCustom-100">
               Scopri i prodotti scontati
             </h4>
-            <span className="my-2 text-lg text-customBlue-100 font-light">
+            <span className="my-2 text-base 2xl:text-lg text-customBlue-100 font-light">
               Scopri le offerte
             </span>
             <button className="my-6 bg-yellowCustom-100 p-2 rounded-2xl shadow-md flex items-center ">
-              <span>Scopri di più</span>
-              <IoIosArrowForward className="text-xl ml-2" />
+              <span className="text-sm 2xl:text-base">Scopri di più</span>
+              <IoIosArrowForward className="text-base 2xl:text-xl ml-2" />
             </button>
           </div>
         </div>
         {/* THIRD OFFER */}
-        <div className="mx-4 my-4 ">
+        <div className=" border-2 border-red-900 mx-4 my-4 ">
           <div className="offer__upper__part ">
             <Image className="w-full" src={ThirdOffer} alt="First Offer" />
           </div>
@@ -57,15 +57,15 @@ const OffersSection = () => {
             <h3 className="text-xl font-medium uppercase text-blueCustom-100">
               Speciale
             </h3>
-            <h4 className="my-1 text-3xl font-bold text-blueCustom-100">
+            <h4 className="my-1 text-xl 2xl:text-3xl font-bold text-blueCustom-100">
               Informatica
             </h4>
-            <span className="my-2 text-lg text-customBlue-100 font-light">
+            <span className="my-2 text-base 2xl:text-lg text-customBlue-100 font-light">
               Scopri le offerte
             </span>
             <button className="my-6 bg-yellowCustom-100 p-2 rounded-2xl shadow-md flex items-center ">
-              <span>Scopri di più</span>
-              <IoIosArrowForward className="text-xl ml-2" />
+              <span className="text-sm 2xl:text-base">Scopri di più</span>
+              <IoIosArrowForward className="text-base 2xl:text-xl ml-2" />
             </button>
           </div>
         </div>

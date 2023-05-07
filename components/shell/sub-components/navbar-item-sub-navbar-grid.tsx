@@ -5,11 +5,11 @@ import { MdMiscellaneousServices } from "react-icons/md";
 import { AiFillGift } from "react-icons/ai";
 const SubNavbarGrid = () => {
   return (
-    <div className="left-0 top-14 pl-52 bg-white flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  pt-4">
-      <div className="grid grid-cols-6">
-        <div className=" flex flex-col ">
+    <div className="left-0 top-14 pl-0 2xl:pl-52 bg-white flex flex-col  pointer-events-none group-hover:pointer-events-auto absolute w-full opacity-0 group-hover:opacity-100 transition-all   z-50  pt-4">
+      <div className="grid grid-cols-4 2xl:grid-cols-6 pl-6 2xl:pl-0">
+        <div className=" flex flex-col m">
           <nav className="mt-2 min-h-[15vh] ">
-            <span className="text-xl font-bold text-blueCustom-100">
+            <span className="text-lg 2xl:text-xl font-bold text-blueCustom-100">
               Computer Portatili
             </span>
             <ul className="flex flex-col">
@@ -22,7 +22,7 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
           <nav className="mt-4 min-h-[15vh]">
-            <span className="text-xl font-bold text-blueCustom-100">
+            <span className="text-lg 2xl:text-xl font-bold text-blueCustom-100">
               Tablet ed Ebbok Reader
             </span>
             <ul className="flex flex-col">
@@ -35,9 +35,11 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
         </div>
-        <div className="">
+        <div className=" flex flex-col mr-6 2xl:mr-0">
           <nav className="mt-2 min-h-[15vh]">
-            <span className="text-xl font-bold text-blueCustom-100">Mac</span>
+            <span className=" text-lg 2xl:text-xl font-bold text-blueCustom-100">
+              Mac
+            </span>
             <ul className="flex flex-col">
               {informaticaCategories?.mac?.map((item, index) => {
                 return index < 3 && <SubNavBarItem key={index} title={item} />;
@@ -48,7 +50,7 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
           <nav className="mt-4 min-h-[15vh]">
-            <span className="text-xl font-bold text-blueCustom-100">
+            <span className="text-lg 2xl:text-xl font-bold text-blueCustom-100">
               Workstation e Server
             </span>
             <ul className="flex flex-col">
@@ -61,9 +63,9 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
         </div>
-        <div className="">
+        <div className=" flex flex-col mr-6 2xl:mr-0">
           <nav className="mt-2 min-h-[15vh]">
-            <span className="text-xl font-bold text-blueCustom-100">
+            <span className="text-lg 2xl:text-xl font-bold text-blueCustom-100">
               Pc Desktop
             </span>
             <ul className="flex flex-col">
@@ -76,7 +78,7 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
           <nav className="mt-4 min-h-[15vh]">
-            <span className="text-xl font-bold text-blueCustom-100">
+            <span className="text-lg 2xl:text-xl font-bold text-blueCustom-100">
               Stampanti e Scanner
             </span>
             <ul className="flex flex-col">
@@ -89,9 +91,9 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
         </div>
-        <div className="">
+        <div className=" flex flex-col mr-6 2xl:mr-0">
           <nav className="mt-2 min-h-[15vh]">
-            <span className="text-xl font-bold text-blueCustom-100">
+            <span className="text-lg 2xl:text-xl font-bold text-blueCustom-100">
               Monitor
             </span>
             <ul className="flex flex-col">
@@ -104,7 +106,7 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
           <nav className="mt-4 min-h-[15vh]">
-            <span className="text-xl font-bold text-blueCustom-100">
+            <span className="text-lg 2xl:text-xl font-bold text-blueCustom-100">
               Hard Disk e Storage
             </span>
             <ul className="flex flex-col">
@@ -117,25 +119,25 @@ const SubNavbarGrid = () => {
             </ul>
           </nav>
         </div>
-        <div className="col-span-2  border-l-4 border-gray-100"></div>
+        <div className="col-span-2 hidden 2xl:block  border-l-4 border-gray-100"></div>
       </div>
-      <div className=" bg-customGray-100 w-full flex justify-center py-6 ">
-        <div className="grid grid-cols-3 w-3/4">
+      <div className=" bg-customGray-100 w-full flex justify-center py-6 mt-8 2xl:mt-0 ">
+        <div className="grid grid-cols-3 w-11/12 lg:w-10/12  2xl:w-3/4">
           <div className=" flex items-center ">
             <BsFillBoxSeamFill className="text-xl" />
-            <span className="text-xl ml-3 font-light">
+            <span className=" text-base 2xl:text-xl ml-3 font-light">
               Consegna anche al piano
             </span>
           </div>
           <div className=" flex items-center">
-            <MdMiscellaneousServices className="text-xl" />
-            <span className="text-xl ml-3 font-light">
+            <MdMiscellaneousServices className=" text-xl" />
+            <span className=" text-base 2xl:text-xl ml-3 font-light">
               Servizi integrativi Serena - fino a 6 anni
             </span>
           </div>
           <div className=" flex items-center">
-            <AiFillGift className="text-xl" />
-            <span className="text-xl ml-3 font-light">
+            <AiFillGift className=" text-xl" />
+            <span className=" text-base 2xl:text-xl ml-3 font-light">
               Vantaggi speciali per gli Euronics Members
             </span>
           </div>

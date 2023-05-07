@@ -117,7 +117,7 @@ const ProductsSection = () => {
         </div>
 
         {/* PRODUCTS CONTAINER */}
-        <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-4 ">
+        <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 ">
           {products?.map((product) => {
             return (
               <div
@@ -146,8 +146,8 @@ const ProductsSection = () => {
                 <p className="mb-2 hover:cursor-pointer hover:text-blueCustom-100 hover:font-normal hover:scale-105 transition-all ease-in text-center text-base md:text-lg text-black font-light">
                   {product?.thirdItem}
                 </p>
-                <button className="mx-2 group mt-4 flex justify-center items-center px-4  py-2 md:py-3 tracking-wide uppercase rounded-full bg-yellowCustom-100 ">
-                  <span className="text-xs md:text-sm font-light">
+                <button className="mx-2 group mt-4 flex justify-center items-center px-4  py-2 xl:py-3 tracking-wide uppercase rounded-full bg-yellowCustom-100 ">
+                  <span className="text-xs xl:text-sm font-light">
                     vedi tutti i prodotti
                   </span>
                   <IoIosArrowForward className="text-xl ml-3 group-hover:translate-x-1 transition-all delay-75 duration-300 ease-in-out" />

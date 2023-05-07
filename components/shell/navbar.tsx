@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { MdLocationOn, MdOutlineStarRate } from "react-icons/md";
 import { GrDocumentImage, GrServices, GrClose } from "react-icons/gr";
 import { GoSearch } from "react-icons/go";
@@ -10,6 +10,7 @@ import Image from "next/image";
 import UpperNavbarItem from "./sub-components/upper-navbar-item";
 import LowerNavbarItem from "./sub-components/lower-navbar-item";
 import SiteLogo from "../../public/assets/site-logo.png";
+import Link from "next/link";
 const Navbar = () => {
   const [searchText, setSearchText] = useState<string>("");
 
@@ -61,7 +62,7 @@ const Navbar = () => {
           <div className=" min-h-[10vh] flex justify-between items-center my-1 ">
             <div className="__left__mid__container w-full xl:w-auto ">
               <div className="relative">
-                <div className="w-7 h-7 xl:h-9 xl:w-9 rounded-full absolute top-2 xl:top-2 flex justify-center items-center  right-2 bg-yellowCustom-100">
+                <div className="w-7 h-7 xl:h-9 xl:w-9 rounded-full absolute top-1 2xl:top-2 flex justify-center items-center  right-2 bg-yellowCustom-100">
                   <GoSearch className="text-lg" />
                 </div>
                 {searchText.length > 0 ? (
@@ -82,29 +83,32 @@ const Navbar = () => {
                     setSearchText(e.target.value);
                   }}
                   placeholder="Cosa stai cercando?"
-                  className=" w-full xl:w-80 2xl:w-96 text-lg bg-white rounded-3xl border shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-8 xl:leading-10 transition-colors duration-200 ease-in-out"
+                  className=" w-full xl:w-80 2xl:w-96 text-lg bg-white rounded-3xl border shadow-lg focus:shadow-none focus:outline-none text-blueCustom-100 py-1 px-3 leading-8 2xl:leading-10 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div>
-            <div className="__center__mid___container relative hidden xl:flex lg:h-52 lg:w-80 2xl:h-52 2xl:w-96 ">
-              <Image src={SiteLogo} alt="Site Logo" />
-            </div>
+            <Link
+              href="/"
+              className="__center__mid___container relative hidden xl:flex w-auto h-30 object-contain  "
+            >
+              <Image src={SiteLogo} alt="Site Logo" width={300} height={300} />
+            </Link>
 
             <div className="__right__mid__container  hidden xl:flex justify-center items-center px-3">
               <div className="   cursor-pointer mx-4">
-                <div className="flex justify-center items-end">
-                  <span className="text-xl">Ciao</span>
-                  <IoIosArrowDown className="ml-1 text-xl" />
+                <div className="flex justify-center items-center 2xl:items-end">
+                  <span className="text-lg 2xltext-xl">Ciao</span>
+                  <IoIosArrowDown className="ml-1 text-lg 2xl:text-xl" />
                 </div>
               </div>
               <div className="mx-2">
-                <div className=" cursor-pointer w-12 h-12 rounded-full bg-gray-200  flex items-center justify-center">
-                  <div className="w-9 h-9 bg-white rounded-full  flex items-center justify-center">
+                <div className=" cursor-pointer w-10 h-10 2xl:w-12 2xl:h-12 rounded-full bg-gray-200  flex items-center justify-center">
+                  <div className=" w-8 h-8 2xl:w-9 2xl:h-9 bg-white rounded-full  flex items-center justify-center">
                     <BiUser />
                   </div>
                 </div>
               </div>
-              <div className="  ml-6">
+              <div className=" ml-3 2xl:ml-6">
                 <div className="relative">
                   <div className="w-14 h-14 rounded-full hover:bg-gray-200 flex justify-center items-center cursor-pointer">
                     <AiOutlineShoppingCart className="text-3xl text-blueCustom-100" />

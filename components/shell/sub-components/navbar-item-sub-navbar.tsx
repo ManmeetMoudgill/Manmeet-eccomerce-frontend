@@ -29,7 +29,7 @@ export const SubNavbar = ({ title }: Props) => {
 
 export const SubNavBarItem = ({ title }: Props) => {
   return (
-    <li className="text-black text-base font-light transition-all delay-75 hover:underline">
+    <li className="text-black text-sm  2xl:text-base font-light transition-all delay-75 hover:underline">
       {title}
     </li>
   );
